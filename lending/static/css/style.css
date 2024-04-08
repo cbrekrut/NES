@@ -7529,7 +7529,10 @@ h1, h2, h3, h4, h5,
     .slider-text .btn-primary:hover, .slider-text .btn-primary:focus {
       background: #fff !important;
       color: #404044; }
-
+.clearboth{
+  margin:10%;
+  clear:both !important;
+}
 .owl-carousel {
   position: relative; }
   .owl-carousel .owl-item {
