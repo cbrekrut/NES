@@ -3271,7 +3271,13 @@ input[type="button"].btn-block {
     -ms-flex-pack: justify;
     justify-content: space-between; }
 
+  @keyframes blink {
+      50% { border-color: transparent; }
+    }
 .navbar-brand {
+  font-family: monospace; /* Для эффекта печатной машинки */
+  border-right: 3px solid rgb(255, 255, 255); 
+  animation: blink 1s step-end infinite;
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -7442,7 +7448,8 @@ h1, h2, h3, h4, h5,
       -o-transition: .3s all ease-out;
       transition: .3s all ease-out; }
     .ftco-navbar-light.scrolled .navbar-brand {
-      color: #404044; }
+      color: #404044;
+    border-right: 3px solid #000; }
 
 .navbar-brand {
   font-weight: 700;
