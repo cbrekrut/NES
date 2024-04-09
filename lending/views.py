@@ -6,8 +6,7 @@ def send_notification(text):
     bot.send_message(chat_id=chat_id, text=text)
 
 def home(request):
-    user = request.user
-    send_notification(f'{user} visit your home page')
+    #send_notification('visit your home page')
     return render(request, 'home.html')
 
 def tsg(request):
