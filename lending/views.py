@@ -5,3 +5,6 @@ def home(request):
 
 def tsg(request):
     return render(request, 'tsg.html')
+
+def portfolio(request):
+    return render(request, 'portfolio.html')
