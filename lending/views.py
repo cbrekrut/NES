@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from telegram import Bot
-def send_notification(text):
-    bot = Bot(token='7128625164:AAG2ZwTPyN8-xkNoIP0wmRNjG-pzIBI1Ncw')
-    chat_id = "543664962"
-    bot.send_message(chat_id=chat_id, text=text)
+import telebot
+
+TELEGRAM_BOT_TOKEN ='7128625164:AAG2ZwTPyN8-xkNoIP0wmRNjG-pzIBI1Ncw'
+TELEGRAM_CHAT_ID = '543664962'
+bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
 
 def home(request):
-    #send_notification('visit your home page')
+    #bot.send_message(TELEGRAM_CHAT_ID, 'Site is online')
     return render(request, 'home.html')
 
 def tsg(request):
