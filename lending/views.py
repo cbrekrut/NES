@@ -7,7 +7,7 @@ def send_notification(text):
 
 def home(request):
     user = request.user
-    send_notification(user,'visit your home page')
+    send_notification(f'{user} visit your home page')
     return render(request, 'home.html')
 
 def tsg(request):
