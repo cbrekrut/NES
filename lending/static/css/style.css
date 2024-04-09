@@ -7885,7 +7885,7 @@ h1, h2, h3, h4, h5,
   margin-bottom: 0; }
 
 .block-3 .image {
-  background-size: cover;
+  background-size: cover !important;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative; }
