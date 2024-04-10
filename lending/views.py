@@ -26,3 +26,6 @@ def contact(request):
         bot.send_message(TELEGRAM_CHAT_ID, message)
 
     return render(request, 'contact.html')
+
+def about(request):
+    return render(request, 'about.html')
