@@ -38,10 +38,10 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
 
-            <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link">О Нас</a></li>
-            <li class="nav-item active"><a href="/portfolio" class="nav-link">Портфолио</a></li>
-            <li class="nav-item"><a href="/contact" class="nav-link">Контакты</a></li>
+            <li class="nav-item"><a href="{% url 'home'%}" class="nav-link">Главная</a></li>
+            <li class="nav-item"><a href="{% url 'about'%}" class="nav-link">О Нас</a></li>
+            <li class="nav-item active"><a href="{% url 'portfolio'%}" class="nav-link">Портфолио</a></li>
+            <li class="nav-item"><a href="{% url 'contact'%}" class="nav-link">Контакты</a></li>
             <li class="nav-item cta"><a href="#" class="nav-link" data-toggle="modal" data-target="#myModal"><span>Заказать вебсайт</span></a></li>
 
           </ul>
@@ -105,7 +105,7 @@
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry">
-              <a href="/tsg" class="block-20" target="_blank" style="background-image: url({% static "images/tsg_logo.jpg" %}); background-position: end;">
+              <a href="{% url 'tsg'%}" class="block-20" target="_blank" style="background-image: url({% static "images/tsg_logo.jpg" %}); background-position: end;">
               </a>
               <div class="text p-4 d-block">
                 <div class="meta">
@@ -117,7 +117,7 @@
           </div>
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry">
-              <a href="#" class="block-20" target="_blank" style="background-image: url({% static 'images/md.png' %}); background-position: end;">
+              <a href="{% url 'md'%}" class="block-20" target="_blank" style="background-image: url({% static 'images/logo_md.jpg' %}); background-position: end;">
               </a>
               <div class="text p-4 d-block">
                 <div class="meta">
