@@ -8708,8 +8708,15 @@ textarea.form-control {
     .block-4 .nonloop .owl-dots .owl-dot.active {
       background: #000; }
 
+.nes-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -30px;
+}
+
 .contact-section {
-  margin-top: -250px; }
+  margin-top: auto; }
   .contact-section .container {
     z-index: 2;
     padding: 30px; }

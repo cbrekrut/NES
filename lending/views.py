@@ -14,3 +14,15 @@ def tsg(request):
 
 def portfolio(request):
     return render(request, 'portfolio.html')
+
+def contact(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        telephone = request.POST.get('telephone')
+        textarea = request.POST.get('Textarea')
+        message = f"Новый заказ!\nИмя: {name}\nEmail: {email}\nТелефон: {telephone}\nОписание: {textarea}"
+        
+        bot.send_message(TELEGRAM_CHAT_ID, message)
+
+    return render(request, 'contact.html')
