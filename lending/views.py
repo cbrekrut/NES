@@ -11,7 +11,10 @@ def home(request):
 
 def tsg(request):
     return render(request, 'tsg.html')
-
+def md(request):
+    return render(request, 'metall-design.html')
+def nanopi(request):
+    return render(request, 'nanopi.html')
 def portfolio(request):
     return render(request, 'portfolio.html')
 
