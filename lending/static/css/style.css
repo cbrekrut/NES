@@ -7678,7 +7678,7 @@ h1, h2, h3, h4, h5,
     padding-top: 7em; }
   .ftco-section-featured .featured-img {
     height:100% !important;
-    width: 100% !important;
+    width: 100%;
     display: block;
     position: relative;
     z-index: 0; }
