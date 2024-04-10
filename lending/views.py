@@ -18,6 +18,9 @@ def nanopi(request):
 def portfolio(request):
     return render(request, 'portfolio.html')
 
+def priliv(request):
+    return render(request, 'priliv.html')
+
 def contact(request):
     if request.method == "POST":
         name = request.POST.get('name')
