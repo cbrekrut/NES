@@ -7,4 +7,5 @@ urlpatterns = [
     path('tsg/', views.tsg, name='tsg'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('contact/', views.contact, name='contact'),
+    path('about/', views.about, name='about'),
 ]
