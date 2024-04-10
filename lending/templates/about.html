@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>NES@Contacts</title>
+    <title>NES@About</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -38,72 +38,137 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link">О Нас</a></li>
+            <li class="nav-item active"><a href="/about" class="nav-link">О Нас</a></li>
             <li class="nav-item"><a href="/portfolio" class="nav-link">Портфолио</a></li>
-            <li class="nav-item active"><a href="/contact" class="nav-link">Контакты</a></li>
+            <li class="nav-item"><a href="/contact" class="nav-link">Контакты</a></li>
             <li class="nav-item cta"><a href="/contact" class="nav-link"><span>Заказать вебсайт</span></a></li>
           </ul>
         </div>
       </div>
     </nav>
     
+    <!-- <div class="js-fullheight"> -->
     <div class="hero-wrap js-fullheight">
       <div class="overlay"></div>
       <div id="particles-js"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span style="opacity: 0.7;"><a href="#contact-us">Свяжитесь с нами</a></span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Контакты</h1>
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span style="opacity: 0.7;">Расскажем немного</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">О нас</h1>
           </div>
         </div>
       </div>
     </div>
     
-    <section class="ftco-section contact-section ftco-degree-bg" id="contact-us">
-      <div class="container bg-light">
-        <div class="row d-flex mb-5 contact-info text-center">
-          <div class="col-md-12 mb-5">
-            <h2 class="h4">Контактная информация</h2>
+    <div class="bg-light">
+      <section class="ftco-section-featured ftco-section-featured-2 ftco-animate">
+        <div class="container-fluid" data-scrollax-parent="true">
+          <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-md-8 text-center heading-section ftco-animate">
+              <h2 class="h1">Опытная команда <strong class="px-3">Разработчиков</strong> с более чем 3 летним стажем в сфере цифровизации бизнеса.</h2>
+              <p><a href="/contact" class="btn btn-primary mt-3 py-3 px-5">Заказать вебсайт</a></p>
+            </div>
           </div>
-          <div class="w-100"></div>
-          <div class="col-md-4">
-            <p><span>Адрес:</span> Улица пушкина дом колотушкина</p>
-          </div>
-          <div class="col-md-4">
-            <p><span>Телефон:</span> <a href="tel://1234567920">+1235 2355 98</a></p>
-          </div>
-          <div class="col-md-4">
-            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
           </div>
         </div>
-        <div class="row block-9">
-          <div class="col-md-6 pr-md-5">
-            <form action="" method="post" id="form">
-              {% csrf_token %}
-              <div class="form-group">
-                <input id="name" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
-                <div class="error text-start fs-6 fw-light"></div>
-              </div>
-              <div class="form-group">
-                <input id="email" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
-                <div class="error text-start fs-6 fw-light"></div>
-              </div>
-              <div class="form-group">
-                <input id="telephone" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
-                <div class="error text-start fs-6 fw-light"></div>
-              </div>
-              <div class="form-group">
-                <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
-                <div class="error text-start fs-6 fw-light"></div>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
+      </section>
+    </div>
+
+    <div class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <span class="subheading">Команда</span>
+            <h2 class="mb-4">Наша команда</h2>
           </div>
-          <div class="col-md-6 nes-logo">
-            <img src="{% static "images/nes_logo.jpg" %}" alt="nes-logo">
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-5 ftco-animate">
+            <div class="block-10">
+              <div class="person-info mb-2">
+                <span class="name">Александр</span>
+                <span class="position">Проектный менеджер</span>
+              </div>
+              <img src="{% static "images/person_1.jpg" %}" alt="" class="img-fluid mb-3">
+            </div>
+          </div>
+          <div class="col-md-4 mb-5 ftco-animate">
+            <div class="block-10">
+              <div class="person-info mb-2">
+                <span class="name">Артем</span>
+                <span class="position">Frontend разработчик</span>
+              </div>
+              <img src="{% static "images/kovtun.jpg" %}" alt="" class="img-fluid mb-3">
+            </div>
+          </div>
+          <div class="col-md-4 mb-5 ftco-animate">
+            <div class="block-10">
+              <div class="person-info mb-2">
+                <span class="name">Дени</span>
+                <span class="position">Backend разработчик</span>
+              </div>
+              <img src="{% static "images/deni.jpg" %}" alt="" class="img-fluid mb-3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <span class="subheading">Отзывы</span>
+            <h2 class="mb-4">Что думают наши клиенты</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item text-center">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({% static "images/nes_logo.jpg" %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Dennis Green</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item text-center">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({% static "images/nes_logo.jpg" %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Dennis Green</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item text-center">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({% static "images/nes_logo.jpg" %})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Dennis Green</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -186,89 +251,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="{% static 'js/google-map.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
-  <script>
-    const form = document.getElementById('form');
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const telephone = document.getElementById('telephone');
-    
-    const setError = (element, message) => {
-        const inputControl = element.parentElement;
-        const errorDisplay = inputControl.querySelector('.error');
-
-        errorDisplay.innerText = message;
-        inputControl.classList.add('error');
-        inputControl.classList.remove('success')
-    };
-
-    const setSuccess = element => {
-        const inputControl = element.parentElement;
-        const errorDisplay = inputControl.querySelector('.error');
-
-        errorDisplay.innerText = '';
-        inputControl.classList.add('success');
-        inputControl.classList.remove('error');
-    };
-
-    const isValidEmail = email => {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }
-
-    const isValidTelephone = telephone => {
-        const re = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
-        return re.test(String(telephone).toLowerCase());
-    }
-
-    const validateInputs = () => {
-        const nameValue = name.value.trim();
-        const emailValue = email.value.trim();
-        const telephoneValue = telephone.value.trim();
-        
-        let flag = true;
-
-        if (nameValue == '' || nameValue == null) {
-            setError(name, 'Имя не может быть пустым');
-            flag = flag && false;
-        } else {
-            setSuccess(name)
-            flag = flag && true;
-        }
-
-        if (emailValue == '' || emailValue == null) {
-            setError(email, 'Email не может быть пустым');
-            flag = flag && false;
-        } else if (!isValidEmail(emailValue)) {
-            setError(email, 'Некорректный email адрес');
-            flag = flag && false;
-        } else {
-            setSuccess(email);
-            flag = flag && true;
-        }
-
-        if (telephoneValue == '' || telephoneValue == null) {
-            setError(telephone, 'Номер телефона не может быть пустым');
-            flag = flag && false;
-        } else if (!isValidTelephone(telephoneValue)) {
-            setError(telephone,' Некорректный номер телефона');
-            flag = flag && false;
-        } else {
-            setSuccess(telephone);
-            flag = flag && true;
-        }
-        return flag;
-
-        
-
-
-    };
-
-    form.addEventListener('submit', e => {
-        if (!validateInputs()){
-            e.preventDefault();
-        }
-    });
-</script>
     
   </body>
 </html>
