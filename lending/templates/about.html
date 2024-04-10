@@ -38,10 +38,10 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
 
-            <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-            <li class="nav-item active"><a href="/about" class="nav-link">О Нас</a></li>
-            <li class="nav-item"><a href="/portfolio" class="nav-link">Портфолио</a></li>
-            <li class="nav-item"><a href="/contact" class="nav-link">Контакты</a></li>
+            <li class="nav-item"><a href="{% url 'home'%}" class="nav-link">Главная</a></li>
+            <li class="nav-item active"><a href="{% url 'about'%}" class="nav-link">О Нас</a></li>
+            <li class="nav-item"><a href="{% url 'portfolio'%}" class="nav-link">Портфолио</a></li>
+            <li class="nav-item"><a href="{% url 'contact'%}" class="nav-link">Контакты</a></li>
             <li class="nav-item cta"><a href="#" class="nav-link" data-toggle="modal" data-target="#myModal"><span>Заказать вебсайт</span></a></li>
           </ul>
         </div>
@@ -126,7 +126,7 @@
             <div class="block-10">
               <div class="person-info mb-2">
                 <span class="name">Александр</span>
-                <span class="position">Проектный менеджер</span>
+                <span class="position">Project Manager</span>
               </div>
               <img src="{% static "images/person_1.jpg" %}" alt="" class="img-fluid mb-3">
             </div>
@@ -135,7 +135,7 @@
             <div class="block-10">
               <div class="person-info mb-2">
                 <span class="name">Артем</span>
-                <span class="position">Frontend разработчик</span>
+                <span class="position">CEO</span>
               </div>
               <img src="{% static "images/kovtun.jpg" %}" alt="" class="img-fluid mb-3">
             </div>
@@ -144,7 +144,7 @@
             <div class="block-10">
               <div class="person-info mb-2">
                 <span class="name">Дени</span>
-                <span class="position">Backend разработчик</span>
+                <span class="position">Team Lead</span>
               </div>
               <img src="{% static "images/deni.jpg" %}" alt="" class="img-fluid mb-3">
             </div>
@@ -172,9 +172,9 @@
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Marketing Manager</span>
+                    <p class="mb-5">Сотрудничество с NES@Agency стало для нас настоящим прорывом. Разработка нашего веб-приложения прошла гладко и эффективно, благодаря профессионализму и инновационным подходам команды. Особенно хочется отметить их внимание к деталям и готовность идти на встречу нашим потребностям. Результат превзошел все наши ожидания: удобный интерфейс, высокая скорость работы и безупречная интеграция с нашими бизнес-процессами. NES@Agency не просто разработали для нас веб-приложение, они помогли нам шагнуть в будущее цифровизации нашего бизнеса!</p>
+                    <p class="name">Ритейл Групп</p>
+                    <span class="position">Маркетолог</span>
                   </div>
                 </div>
               </div>
@@ -186,9 +186,9 @@
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Interface Designer</span>
+                    <p class="mb-5">В процессе цифровизации наших образовательных курсов мы обратились в NES@Agency, и это было одним из лучших решений, которые мы когда-либо принимали. Команда проявила себя как настоящие эксперты в разработке веб-приложений, предложив нам индивидуальное решение, которое идеально вписалось в нашу систему обучения. Благодаря их работе, наши курсы стали доступны онлайн в максимально удобном и функциональном формате. Весь процесс сотрудничества был чрезвычайно позитивным опытом, и мы обязательно будем обращаться за помощью к NES@Agency в будущем.</p>
+                    <p class="name">E-commerce</p>
+                    <span class="position">Интернет менеджер</span>
                   </div>
                 </div>
               </div>
@@ -200,9 +200,9 @@
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">UI Designer</span>
+                    <p class="mb-5">Переход на цифровые технологии был ключевым шагом в развитии нашей компании, и мы не могли найти лучшего партнера, чем NES@Agency. Их команда не только разработала для нас впечатляющее веб-приложение, но и предложила целый ряд инновационных решений для оптимизации наших бизнес-процессов. Профессионализм, скорость и качество работы команды NES@Agency заслуживают высочайшей похвалы. Они действительно понимают, как превратить идеи в реальность, и сделать процесс управления бизнесом проще и эффективнее.</p>
+                    <p class="name">Образование онлайн</p>
+                    <span class="position">CEO</span>
                   </div>
                 </div>
               </div>

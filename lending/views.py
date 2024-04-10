@@ -72,6 +72,8 @@ def priliv(request):
 def contact(request):
     if request.method == "POST":
         name = request.POST.get('name')
+        if name == '':
+            name = request.POST.get('name')
         email = request.POST.get('email')
         telephone = request.POST.get('telephone')
         textarea = request.POST.get('Textarea')

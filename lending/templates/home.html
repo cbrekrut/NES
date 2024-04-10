@@ -37,10 +37,10 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
 
-          <li class="nav-item active"><a href="/" class="nav-link">Главная</a></li>
-          <li class="nav-item"><a href="/about" class="nav-link">О Нас</a></li>
-          <li class="nav-item"><a href="/portfolio" class="nav-link">Портфолио</a></li>
-          <li class="nav-item"><a href="/contact" class="nav-link">Контакты</a></li>
+            <li class="nav-item active"><a href="{% url 'home'%}" class="nav-link">Главная</a></li>
+            <li class="nav-item"><a href="{% url 'about'%}" class="nav-link">О Нас</a></li>
+            <li class="nav-item"><a href="{% url 'portfolio'%}" class="nav-link">Портфолио</a></li>
+            <li class="nav-item"><a href="{% url 'contact'%}" class="nav-link">Контакты</a></li>
           <li class="nav-item cta"><a href="#" class="nav-link" data-toggle="modal" data-target="#myModal"><span>Заказать вебсайт</span></a></li>
 
         </ul>
@@ -164,13 +164,13 @@
                   <div class="col-md-8">
                     <a href="#" class="featured-img">
                       <div class="text-1 p-4 d-flex align-items-center">
-                        <h3>Curator<br><span class="tag">Website</span></h3>
+                        <h3>Coffee Shop<br><span class="tag">Вебсайт</span></h3>
                       </div>
                       <img src="{% static 'images/image_6.jpg' %}" class="img-fluid" alt="">
                       <div class="text p-4 d-flex align-items-center">
                         <div class="user d-flex align-items-center">
-                          <div class="user-img mr-3" style="background-image: url({% static 'images/person_1.jpg' %});"></div>
-                          <h3>John Bruce <br><span class="position">Designer</span></h3>
+                          <div class="user-img mr-3" style="background-image: url({% static 'images/kovtun.jpg' %});"></div>
+                          <h3>Ковтун Артем <br><span class="position">CEO</span></h3>
                         </div>
                       </div>
                     </a>
@@ -178,13 +178,13 @@
                   <div class="col-md-4">
                     <a href="#" class="featured-img">
                       <div class="text-1 p-4 d-flex align-items-center">
-                        <h3>Tasty<br><span class="tag">Website</span></h3>
+                        <h3>Crystall<br><span class="tag">Вебсайт</span></h3>
                       </div>
                       <img src="{% static 'images/image_3.jpg' %}" class="img-fluid" alt="">
                       <div class="text p-4 d-flex align-items-center">
                         <div class="user d-flex align-items-center">
-                          <div class="user-img mr-3" style="background-image: url({% static 'images/person_1.jpg' %});"></div>
-                          <h3>John Bruce <br><span class="position">Designer</span></h3>
+                          <div class="user-img mr-3" style="background-image: url({% static 'images/deni.jpg' %});"></div>
+                          <h3>Дени Ли <br><span class="position">DevOps</span></h3>
                         </div>
                       </div>
                     </a>
