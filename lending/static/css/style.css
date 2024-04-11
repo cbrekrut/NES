@@ -2024,12 +2024,12 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #000000;
-  background-color: #78d5ef;
-  border-color: #78d5ef; }
+  background-color: #ffffff;
+  border-color: #ffffff; }
   .btn-primary:hover {
     color: #000000;
-    background-color: #56caeb;
-    border-color: #4ac7ea; }
+    background-color: #ffffff;
+    border-color: #ffffff; }
   .btn-primary:focus, .btn-primary.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(120, 213, 239, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(120, 213, 239, 0.5); }
