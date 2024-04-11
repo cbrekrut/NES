@@ -40,8 +40,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+a:not([href]):not([tabindex]) {
+  color: #fff !important;
+}
 html {
-  scroll-behavior: smooth;
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
