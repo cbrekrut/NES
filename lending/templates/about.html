@@ -163,7 +163,7 @@
           <div class="col-md-7 text-center heading-section ftco-animate">
             <span class="subheading">Отзывы</span>
             <h2 class="mb-4">Что думают наши клиенты</h2>
-          </div>
+          </div> 
         </div>
         <div class="row ftco-animate">
           <div class="col-md-12">
@@ -295,6 +295,16 @@
       typeLetter();
     });
   </script> 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function myFunction() {
+        if (document.querySelector('.owl-drag')) {
+          document.querySelector('.ftco-owl').classList.remove('owl-drag');
+        }
+      }
+      myFunction();
+    });
+  </script>
   <script>
     const form = document.getElementById('form');
     const name = document.getElementById('name');
