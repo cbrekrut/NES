@@ -660,5 +660,20 @@
         }
     });
 </script>
+<script>
+  var navbarCollapse = document.querySelector('.navbar-collapse');
+  // Добавляем обработчик события на клик по ссылкам в меню
+  var navbarLinks = document.querySelectorAll('.nav-item .nav-link');
+  navbarLinks.forEach(function(navbarLink) {
+    navbarLink.addEventListener('click', function() {
+      // Если меню открыто на мобильном устройстве, скрываем его после клика по ссылке
+      if (navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+      }
+    });
+  });
+</script>
+
+
   </body>
 </html>
