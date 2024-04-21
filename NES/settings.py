@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#waun7n%*v6qp8@k&1%-vxl4^0#*e8=v())e3w%ew=bdroqsi0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['nes-agency.ru','*','www.nes-agency.ru']
 
@@ -95,7 +95,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -105,7 +105,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'NES/lending/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = 'static/'
 
 # Default primary key field type

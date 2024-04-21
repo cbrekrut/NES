@@ -9081,3 +9081,22 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+  .progress {
+      height: 20px;
+  }
+  
+  .progress-bar {
+      transition: width 0.4s ease;
+  }
+  
+  .quiz-questions .question {
+      display: none;
+  }
+  
+  .quiz-questions .question.active {
+      display: block;
+  }
+  #quiz-section{
+    width: 100%;
+  }
