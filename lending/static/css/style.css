@@ -40,6 +40,8 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+
+
 a:not([href]):not([tabindex]) {
   color: #fff !important;
 }
@@ -49,7 +51,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  max-width: 100vw !important; 
+  overflow-x: hidden !important; }
 
 @-ms-viewport {
   width: device-width; }
@@ -65,7 +69,11 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff;
+  max-width: 100vw !important; 
+  overflow-x: hidden !important;
+  user-select: none !important;
+  }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -7939,7 +7947,7 @@ h1, h2, h3, h4, h5,
       border-width: 20px 45px 0 45px;
       border-color: #def4fb transparent transparent transparent; }
   .services .icon.color-4 {
-    background: #ebfdf4; }
+    background: #ebfdf4; } 
     .services .icon.color-4 span {
       color: #79efb4; }
     .services .icon.color-4:before {
@@ -9272,4 +9280,67 @@ textarea.form-control {
   background: #fff !important;
   border: 2px solid #000 !important;
   color: #000 !important;
+}
+
+.prices {
+  color: black;
+  width: 90vw !important;
+}
+
+.prices-container {
+  width: 90vw !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+.btn-prices-first{
+  background: linear-gradient(to right, #8ffbff, #2072ff, #1322c1);
+  background-position: 100% 0;
+  background-size: 150% 100%;
+  color: white !important;
+  border: none;
+  transition: background-position 0.5s ease-in-out !important;
+}
+
+.btn-prices-first:hover{
+  background-position: 0 0;
+}
+
+.btn-prices-second {
+  background: linear-gradient(to right, #8fffc1, #73e1e3, #60a7d6);
+  background-position: 100% 0;
+  background-size: 150% 100%;
+  color: white !important;
+  border: none;
+  transition: background-position 0.5s ease-in-out !important;
+}
+
+.btn-prices-second:hover{
+  background-position: 0 0;
+}
+
+.btn-prices-third {
+  background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
+  background-position: 100% 0;
+  background-size: 150% 100%;
+  color: white !important;
+  border: none;
+  transition: background-position 0.5s ease-in-out !important;
+}
+
+.btn-prices-third:hover{
+  background-position: 0 0;
+}
+
+.btn-prices-fourth {
+  background: linear-gradient(to right, #e53acc, #c829e4, #7a29e4);
+  background-position: 100% 0;
+  background-size: 150% 100%;
+  color: white !important;
+  border: none;
+  transition: background-position 0.5s ease-in-out !important;
+}
+
+.btn-prices-fourth:hover{
+  background-position: 0 0;
 }
