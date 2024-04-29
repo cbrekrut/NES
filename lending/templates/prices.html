@@ -1,0 +1,290 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- <div class="js-fullheight"> -->
+    <div class="hero-wrap js-fullheight">
+      <div class="overlay"></div>
+      <div id="particles-js"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span style="opacity: 0.7;">Расскажем немного про</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Цены и Услуги</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2 class="mb-4">Основные услуги</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Карточка услуги -->
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-11">
+                    <div class="text-center">
+                        <span class="excerpt d-block" style="
+                  background: linear-gradient(to right, #8fceff, #2072ff, #1322c1);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;">Лендинг</span>
+                  <span class="excerpt d-block fs-5" style="
+                  background: linear-gradient(to right, #8fceff, #2072ff, #1322c1);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;">(от 2 дней)</span>
+                        <span class="price"> <span class="number" style="
+                  background: linear-gradient(to right, #8fceff, #2072ff, #1322c1);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;">от 20,000</span><sup>₽</sup></span>
+                        </div>
+                        <div class="text-start">
+                        <ul class="pricing-text">
+                            <li>Привлечение внимания целевой аудитории через стильный, визуально привлекательный дизайн.</li>
+                            <li>Высокая конверсия благодаря оптимизированной структуре с вызывающими действие элементами.</li>
+                            <li>Полная мобильная оптимизация для лучшего пользовательского опыта на всех устройствах.</li>
+                        </ul>
+                        <a href="#" class="btn d-block px-2 py-3 btn-prices-first mt-3" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка услуги -->
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-11">
+                    <div class="text-center">
+                        <span class="excerpt d-block" style="
+                  background: linear-gradient(to right, #86ef8b, #73e1e3, #60a7d6);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">Мультилендинг</span>
+              <span class="excerpt d-block fs-5" style="
+              background: linear-gradient(to right, #86ef8b, #73e1e3, #60a7d6);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">(от 5 дней)</span>
+                        <span class="price"> <span class="number" style="
+                  background: linear-gradient(to right, #86ef8b, #73e1e3, #60a7d6);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">от 40,000</span><sup>₽</sup></span>
+                        </div>
+                        <div class="text-start">
+                        <ul class="pricing-text">
+                            <li>Идеально для масштабных проектов с нуждой в детальной презентации нескольких продуктов.</li>
+                            <li>Индивидуальный подход к каждому продукту, улучшая SEO и маркетинговую эффективность.</li>
+                            <li>Каждая страница оптимизирована под отдельные ключевые запросы, увеличение охвата аудитории.</li>
+                        </ul>
+                        <a href="#" class="btn btn-prices-second d-block px-2 py-3 mt-3" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка услуги -->
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-11">
+                    <div class="text-center">
+                        <span class="excerpt d-block" style="
+                  background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">Корпоративный сайт</span>
+              <span class="excerpt d-block fs-5" style="
+              background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">(от 14 дней)</span>
+                        <span class="price"> <span class="number" style="
+                  background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">от 100,000</span><sup>₽</sup></span>
+                        </div>
+                        <div class="text-start">
+                        <ul class="pricing-text">
+                            <li>Профессиональное представление вашей компании и укрепление бренда.</li>
+                            <li>Интеграция с бизнес-процессами для улучшенной коммуникации с клиентами.</li>
+                            <li>Высокий уровень безопасности и надежности сайта. (Поддержка 24/7)</li>
+                        </ul>
+                        <a href="#" class="btn btn-prices-third d-block px-2 py-3 mt-3" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка услуги -->
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-11">
+                    <div class="text-center">
+                        <span class="excerpt d-block" style="
+                  background: linear-gradient(to right, #e53acc, #c829e4, #7a29e4);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">Интернет-магазин</span>
+              <span class="excerpt d-block fs-5" style="
+              background: linear-gradient(to right, #e53acc, #c829e4, #7a29e4);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">(от 14 дней)</span>
+                        <span class="price"> <span class="number" style="
+                  background: linear-gradient(to right, #e53acc, #c829e4, #7a29e4);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">от 130,000</span><sup>₽</sup></span>
+                        </div>
+                        <div class="text-start">
+                        <ul class="pricing-text">
+                            <li>Полнофункциональная торговая платформа с интуитивно понятным интерфейсом</li>
+                            <li>Автоматизация всех торговых операций, включая управление заказами и логистику</li>
+                            <li>Поддержка множества способов оплаты и высокий уровень безопасности транзакций</li>
+                        </ul>
+                        <a href="#" class="btn btn-prices-fourth d-block px-2 py-3 mt-3" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Карточка услуги -->
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-11">
+                    <div class="text-center">
+                        <span class="excerpt d-block" style="
+              background: linear-gradient(to right, #86ef8b, #73e1e3, #60a7d6);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">Каталог</span>
+                  <span class="excerpt d-block fs-5" style="
+              background: linear-gradient(to right, #86ef8b, #73e1e3, #60a7d6);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">(от 5 дней)</span>
+                        <span class="price"> <span class="number" style="
+              background: linear-gradient(to right, #86ef8b, #73e1e3, #60a7d6);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">от 100,000</span><sup>₽</sup></span>
+                        </div>
+                        <div class="text-start">
+                        <ul class="pricing-text">
+                            <li>Разработка продвинутой системы категорий и фильтров для упрощения поиска продуктов.</li>
+                            <li>Внедрение системы управления контентом (CMS), позволяющей оперативно обновлять информацию о товарах.</li>
+                            <li>Добавление демонстрации продуктов, что позволяет пользователям лучше оценить товар перед покупкой.</li>
+                        </ul>
+                        <a href="#" class="btn d-block px-2 py-3 btn-prices-second mt-3" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Карточка услуги -->
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-11">
+                    <div class="text-center">
+                        <span class="excerpt d-block" style="
+              background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">Редизайн</span>
+                  <span class="excerpt d-block fs-5" style="
+              background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">(от 2 дней)</span>
+                        <span class="price"> <span class="number" style="
+              background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">от 60,000</span><sup>₽</sup></span>
+                        </div>
+                        <div class="text-start">
+                        <ul class="pricing-text">
+                            <li>Обновленный дизайн сайта с акцентом на современные визуальные решения.</li>
+                            <li>Применение современных технологий для ускорения работы сайта. Адаптивность на любых устройствах.</li>
+                            <li>Внедрение передовых SEO практик для улучшения позиций в поисковой выдаче и увеличения органического трафика.</li>
+                        </ul>
+                        <a href="#" class="btn d-block px-2 py-3 btn-prices-third mt-3" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2 class="mb-4">Дополнительные услуги</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-7">
+                    <div class="text-center">
+                        <span class="excerpt d-block text-dark">Контекстная реклама</span>
+                        <span class="price"><span class="number">15,000</span>₽ / мес</span>
+                        <ul class="pricing-text">
+                            <li>Настройка и оптимизация</li>
+                            <li>Повышение конверсии</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary d-block px-2 py-3 prices-btn" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-7">
+                    <div class="text-center">
+                        <span class="excerpt d-block text-dark">Ведение сайта</span>
+                        <span class="price"><span class="number">10,000</span>₽ / мес</span>
+                        <ul class="pricing-text">
+                            <li>Техническое обслуживание</li>
+                            <li>Обновление контента</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary d-block px-2 py-3 prices-btn" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-7">
+                    <div class="text-center">
+                        <span class="excerpt d-block text-dark">SEO оптимизация</span>
+                        <span class="price"><span class="number">20,000</span>₽ / проект</span>
+                        <ul class="pricing-text">
+                            <li>Повышение видимости сайта</li>
+                            <li>Улучшение поискового ранжирования</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary d-block px-2 py-3 prices-btn" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 ftco-animate">
+                <div class="block-7">
+                    <div class="text-center">
+                        <span class="excerpt d-block text-dark">Хостинг</span>
+                        <span class="price"><span class="number">5,000</span>₽ / год</span>
+                        <ul class="pricing-text">
+                            <li>Надежные и быстрые сервера</li>
+                            <li>Поддержка 24/7</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary d-block px-2 py-3 prices-btn" data-toggle="modal" data-target="#myModal">Заказать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

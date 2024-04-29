@@ -1,0 +1,548 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+<div class="hero-wrap js-fullheight">
+    <div class="overlay"></div>
+    <div id="particles-js"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+        <div class="col-md-6 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+          <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Разработка сайтов</h1>
+          <h1 class="mb-4 fs-4 px-1" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Воплощаем ваши идеи в <strong>цифровую</strong> реальность!</h1>
+          <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+            <a href="" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-outline-white px-5 py-3 hero-btn">Заказать вебсайт</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END  -->
+  <section class="ftco-section">
+    <div class="container">
+      <!-- <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-6 text-center heading-section ftco-animate">
+          <span class="subheading">Наши услуги</span>
+          <h2 class="mb-4">Процесс разработки</h2>
+          <p>Мы предлагаем решения в сфере цифровизации бизнеса и полного сопровождения в сфере IT-Технологий</p>
+        </div>
+      </div> -->
+      <div class="row pt-2">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate mb-5 mb-md-0">
+          <div class="media block-6 services d-block text-center" style="margin-bottom:0;">
+            <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-2"><span class="align-self-center fa-solid fa-money-bill-trend-up"></span></div></div>
+            <div class="media-body p-2 mt-3">
+              <h3 class="heading">Увеличение продаж</h3>
+              <p>Стильный и красивый дизайн с интересным контентом увеличивает продажи компании через интернет в разы</p>
+            </div>
+          </div>      
+        </div>
+
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate mb-5 mb-md-0">
+          <div class="media block-6 services d-block text-center" style="margin-bottom:0;">
+            <div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-2"><span class="align-self-center fa-solid fa-angles-up"></span></div></div>
+            <div class="media-body p-2 mt-3">
+              <h3 class="heading">Повышение имиджа</h3>
+              <p>Фирменный стиль и современный дизайн отразят высокий уровень вашей компании</strong></p>
+            </div>
+          </div>    
+        </div>
+
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate mb-5 mb-md-0">
+          <div class="media block-6 services d-block text-center" style="margin-bottom:0;">
+            <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-2"><span class="align-self-center fa-solid fa-face-smile-beam"></span></div></div>
+            <div class="media-body p-2 mt-3">
+              <h3 class="heading">Простота взаимодействия</h3>
+              <p>Создание продуманного интерфейса и мобильной версии обеспечат максимальный комфорт пользователю</p>
+            </div>
+          </div>      
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- END  -->
+    
+    <!-- портфолио-->
+      <div class="bg-light">
+      <section class="ftco-section-featured mt-3">
+        <div class="container-fluid" data-scrollax-parent="true">
+          <div class="row no-gutters d-flex align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
+            <div class="col-md-3 mb-3 ftco-animate">
+              <a href="{% url 'portfolio_ident' id=5 %}" target="_blank" class="featured-img">
+                <div class="text-1 p-4 d-flex align-items-center">
+                  <h3>Евро Сервис<br><span class="tag text-center">Корпоративный вебсайт</span></h3>
+                </div>
+                <img src="{% static 'images/evroservice.png' %}" class="img-fluid" alt="">
+                <div class="text p-4 d-flex align-items-center">
+                  <div class="user d-flex align-items-center">
+                    <h3 class="fs-4 fw-light">130,000₽</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {% comment %} tsg {% endcomment %}
+            <div class="col-md-6 ">
+              <div class="row no-gutters">
+                <div class="col-md-12">
+                  <div class="row no-gutters d-flex align-items-end">
+    
+                    <div class="col-md-8 ftco-animate">
+                      <a href="{% url 'portfolio_ident' id=2 %}" target="_blank" class="featured-img">
+                        <div class="text-1 p-4 d-flex align-items-center">
+                          <h3>Trans Service Group<br><span class="tag">Интернет-магазин</span></h3>
+                        </div>
+                        <img src="{% static 'images/tsg.png' %}" class="img-fluid" alt="">
+                        <div class="text p-4 d-flex align-items-center">
+                          <div class="user d-flex align-items-center">
+                            <h3 class="fs-4 fw-light">2,200$</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+    
+                    <div class="col-md-4 ftco-animate">
+                      <a href="{% url 'portfolio_ident' id=6 %}" class="featured-img" target="_blank">
+                        <div class="text-1 p-4 d-flex align-items-center">
+                          <h3>Гостевой дом "У озера"<br><span class="tag">Корпоративный вебсайт</span></h3>
+                        </div>
+                        <img src="{% static 'images/gduozera.png' %}" class="img-fluid" alt="">
+                        <div class="text p-4 d-flex align-items-center">
+                          <div class="user d-flex align-items-center">
+                            <h3 class="fs-4 fw-light">120,000₽</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-0 mt-md-5 pt-0 pt-md-5">
+                  <div class="row no-gutters d-flex align-items-start">
+                    <div class="col-md-12 ftco-animate">
+                      <a href="{% url 'portfolio_ident' id=4 %}" class="featured-img" target="_blank">
+                        <div class="text-1 p-4 d-flex align-items-center">
+                          <h3>SNG<br><span class="tag">Лендинг</span></h3>
+                        </div>
+                        <img src="{% static 'images/sng.png' %}" class="img-fluid" alt="" style="height:100%; width:100%; object-fit:cover;">
+                        <div class="text p-4 d-flex align-items-center">
+                          <div class="user d-flex align-items-center">
+                            <h3 class="fs-4 fw-light">50,000₽</h3>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 ftco-animate">
+              <a href="{% url 'portfolio_ident' id=3 %}" class="featured-img" target="_blank">
+                <div class="text-1 p-4 d-flex align-items-center">
+                  <h3>Проектное бюро "Прилив"<br><span class="tag">Лендинг</span></h3>
+                </div>
+                <img src="{% static 'images/priliv.png' %}" class="img-fluid" alt="">
+                <div class="text p-4 d-flex align-items-center">
+                  <div class="user d-flex align-items-center">
+                    <h3 class="fs-4 fw-light">30,000₽</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+
+<!-- ТАРИФЫ -->
+<section class="ftco-section d-flex justify-content-center" id="prices">
+  <div class="container prices-container mb-5 pb-5" style="margin:0;width: 100vw; max-width: 100vw; padding: 0 5vw;">
+    <div class="row no-gutters justify-content-center mb-md-5 pb-5"> 
+      <div class="col-md-7 text-center heading-section ftco-animate">
+        <h2 class="mb-4">Наши тарифы</h2>
+      </div>
+    </div>
+    <div class="row prices">
+      <div class="col-md-6 col-lg-4 col-12 mb-3 ftco-animate" >
+        <div class="card mr-md-1" style="border:none; height: 100%;">
+          <div class="card-body bg-light" id="card1">
+            <h5 class="card-title">
+              <span class="fs-2 fw-bold" style="
+                  background: linear-gradient(to right, #8fceff, #2072ff, #1322c1);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">Лендинг</span>
+            </h5>
+            <p class="card-text">от <span class="fs-5">20.000₽</span></p>
+            <p class="card-text">Максимальные конверсии по заявкам и звонкам</p>
+            <a href="{% url "prices" %}" class="btn btn-prices-first btn-lg">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate" >
+        <div class="card mr-md-1 d-flex flex-column justify-content-between" style="border:none; height: 100%;">
+          <div class="card-body bg-light" id="card2">
+            <h5 class="card-title">
+              <span class="fs-2 fw-bold" style="
+                  background: linear-gradient(to right, #86ef8b, #73e1e3, #60a7d6);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">Мультилендинг</span>
+            </h5>
+            <p class="card-text">от <span class="fs-5">40.000₽</span></p>
+            <p class="card-text">Подстраивается под запросы клиента</p>
+            <a href="{% url "prices" %}" class="btn btn-prices-second btn-lg">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate" >
+        <div class="card mr-md-1 d-flex flex-column justify-content-between" style="border:none; height: 100%;">
+          <div class="card-body bg-light" id="card3">
+            <h5 class="card-title">
+              <span class="fs-2 fw-bold" style="
+                  background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">Корпоративный сайт</span>
+            </h5>
+            <p class="card-text">от <span class="fs-5">100.000₽</span></p>
+            <p class="card-text">Закрепите репутацию вашей компании в интернете.</p>
+            <a href="{% url "prices" %}" class="btn btn-prices-third btn-lg">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate">
+        <div class="card" style="border:none; height: 100%;">
+          <div class="card-body bg-light" id="card4">
+            <h5 class="card-title">
+              <span class="fs-2 fw-bold" style="
+                  background: linear-gradient(to right, #e53acc, #c829e4, #7a29e4);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+              ">Интернет-магазин</span>
+            </h5>
+            <p class="card-text">от <span class="fs-5">130.000₽</span></p>
+            <p class="card-text">Сайт для онлайн продаж</p>
+            <a href="{% url "prices" %}" class="btn btn-prices-fourth btn-lg">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate">
+        <div class="card" style="border:none; height: 100%;">
+          <div class="card-body bg-light" id="card5">
+            <h5 class="card-title">
+              <span class="fs-2 fw-bold" style="
+              background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">Каталог</span>
+            </h5>
+            <p class="card-text">от <span class="fs-5">100.000₽</span></p>
+            <p class="card-text">Витрина для ваших товаров и услуг</p>
+            <a href="{% url "prices" %}" class="btn btn-prices-third btn-lg">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate">
+        <div class="card" style="border:none; height: 100%;">
+          <div class="card-body bg-light" id="card6">
+            <h5 class="card-title">
+              <span class="fs-2 fw-bold" style="
+              background: linear-gradient(to right, #8fceff, #2072ff, #1322c1);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+          ">Редизайн</span>
+            </h5>
+            <p class="card-text">от <span class="fs-5">60.000₽</span></p>
+            <p class="card-text">Обновленный дизайн и новый функционал</p>
+            <a href="{% url "prices" %}" class="btn btn-prices-first btn-lg">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% comment %} ОПРОСНИК {% endcomment %}
+<section class="ftco-section bg-light" id="quiz-section">
+  <div class="container mt-5 pt-5 mb-5 pb-5">
+      <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+              <h2>Пройдите короткий опрос и узнайте какой тариф подойдет именно вам!</h2>
+              <p>Ответьте на вопросы, чтобы мы смогли предложить вам лучшее решение.</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <form id="quizForm" class="text-center">
+                  <!-- Прогресс-бар -->
+                  <div class="progress mb-4">
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <!-- Область вопросов -->
+                  <div id="quizQuestions" class="quiz-questions mt-5 ml-4 mb-5">
+                      <!-- Вопросы будут добавлены здесь -->
+                  </div>
+                  <button type="button" class="btn btn-lg btn-primary py-2 px-5" id="nextQuestion">Далее</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- END  -->
+<!-- Процесс Разработки -->
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-5">
+      <div class="col-md-6 text-center heading-section ftco-animate">
+        <h2 class="mb-4 color-dark" >Процесс разработки</h2>
+        <p>Мы предлагаем решения в сфере цифровизации бизнеса и полного сопровождения в сфере IT-Технологий</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-3"><span class="align-self-center icon-lightbulb-o"></span></div></div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading fw-bold color-dark" >Анализ</h3>
+            <p>Проводится анализ ниши, выявляются сильные и слабые стороны конкурентов. Клиенту предоставляется концепция будущего сайта.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><span class="align-self-center icon-laptop"></span></div></div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading fw-bold color-dark">Дизайн</h3>
+            <p>Наши дизайнеры разрабатывают яркий и современный дизайн для вашего сайта. Макет создается с учетом пожеланий заказчика.</p>
+          </div>
+        </div>      
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-3"><span class="align-self-center icon-gear"></span></div></div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading fw-bold color-dark" >Разработка</h3>
+            <p >Созданный дизайн страницы и контент совмещаются в удобный и красивый сайт, который адаптируется под любые устройства.</p>
+          </div>
+        </div>    
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><span class="align-self-center icon-live_help"></span></div></div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading fw-bold color-dark" >Помощь &amp; Поддержка</h3>
+            <p>
+              Наши специалисты всегда готовы помочь вам после запуска сайта, обеспечивая быструю и эффективную поддержку при возникновении любых проблем.</p>
+          </div>
+        </div>   
+      </div>
+    </div>   
+  </div>
+</section>
+
+{% comment %} Гармошка {% endcomment %}
+<section class="ftco-section bg-light" >
+  <div class="container">
+    <div class="row d-flex justify-content-around">
+        <div class="col-md-6 mt-3 ftco-animate d-flex align-items-center">
+          <h1 class="text-center display-4 ">Преимущества <br>разработанных <br>нами сайтов</h1>
+        </div>
+        <div class="col-md-6 mt-3">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default ftco-animate">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                      <h4 class="panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                              Уникальный современный дизайн
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                          <p>Неудачный или устаревший интерфейс может плохо повлиять на имидж компании. Мы предлагаем вам сайты, соответствующие современным критериям качества и эстетики, в вашем фирменном стиле.  </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="panel panel-default ftco-animate">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Адаптивность под любые устройства
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                          <p>В 2024 году 80% веб-трафика приходится на мобильные телефоны. Если ваш сайт не удобен на мобильном телефоне, вы теряете клиентов. Мы разрабатываем сайты, удобные на любом устройстве: для компьютеров, ноутбуков, планшетов и телефонов.  </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="panel panel-default ftco-animate">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Удобная система управления (CMS)
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                          <p>Вы сможете самостоятельно добавлять и изменять контент. Функциональные возможности: формы обратной связи, фотогалереи, прайс-листы, интерактивная карта проезда, виджет захвата звонков, онлайн-чат, тексты, фото, видео в любом объёме. </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="panel panel-default ftco-animate">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            Наполнение сайта
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <p>Подготовка продуманных текстов, УТП (уникальных торговых предложений), триггеров, делающих ваш сайт интересным для потенциальных клиентов.  </p>
+                    </div>
+                </div>
+             </div>
+             <div class="panel panel-default ftco-animate">
+                  <div class="panel-heading" role="tab" id="headingFive">
+                      <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              Маркетинговая составляющая
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                      <div class="panel-body">
+                          <p>В проектировании и разработке участвуют разные профильные специалисты: маркетолог, дизайнер, верстальщик, программист, копирайтер, SEO-оптимизатор. Благодаря этому будут соблюдены все требования интернет-маркетинга. Мы делаем удобные, красивые, продающие сайты, и их легко продвигать в ТОП поисковых систем.  </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="panel panel-default ftco-animate">
+                <div class="panel-heading" role="tab" id="headingSix">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Высокий показатель конверсий
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                    <div class="panel-body">
+                        <p>При эффективной маркетинговой стратегии вы получите высокие конверсии уже в первые недели работы. </p>
+                    </div>
+                </div>
+             </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END  -->
+<!-- ГАРАНТИИ -->
+<section class="ftco-section-parallax">
+  <div class="hero-wrap-3">
+    <div class="overlay-3"></div>
+    <div id="particles-js-3"></div>
+    <div class="parallax-img-why-we">
+      <div class="container why-we-con text-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 text-center heading-section heading-section-white ftco-animate mt-5 pt-5 pb-5">
+            <h2>Причины заказать разработку у нас</h2>
+          </div>
+        </div>
+        <div class="row mt-5 pb-5 d-flex justify-content-around">
+          <div class="col-md-3 mb-5 why-we-col pe-md-3 ml-md-3 ftco-animate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="#29BAE4" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+            </svg>
+            <p class="fs-4">Строго соблюдаем сроки реализации проекта</p>
+          </div>
+          <div class="col-md-3 mb-5 why-we-col ps-md-3 pe-md-3 ftco-animate">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="#29BAE4" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+              </svg>
+              <p class="fs-4">Проводим многоуровневое тестирование при запуске</p>
+          </div>
+          <div class="col-md-3 mb-5 why-we-col ps-md-3 mr-md-3 ftco-animate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="#29BAE4" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+            </svg>
+            <p class="fs-4">Мы поддерживаем ваш сайт 24/7</p>
+          </div>
+        </div>          
+      </div>
+    </div>
+  </div>
+</section>
+{% comment %} ФОРМА {% endcomment %}
+<section class="ftco-section contact-section ftco-degree-bg" id="contact-us">
+  <div class="container bg-light">
+    <div class="row d-flex mb-5 contact-info text-center">
+      <div class="col-md-12 mb-5">
+        <h2 class="h4">Давайте обсудим ваш проект</h2>
+      </div>
+      <div class="w-100"></div>
+    </div>
+    <div class="row block-9">
+      <div class="col-12 pr-md-5">
+        <form action="" method="post" id="form1">
+          {% csrf_token %}
+          <div class="form-group">
+            <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+            <div class="error text-start fs-6 fw-light"></div>
+          </div>
+          <div class="form-group">
+            <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+            <div class="error text-start fs-6 fw-light"></div>
+          </div>
+          <div class="form-group">
+            <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+            <div class="error text-start fs-6 fw-light"></div>
+          </div>
+          <div class="form-group">
+            <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+            <div class="error text-start fs-6 fw-light"></div>
+          </div>
+          <div class="g-recaptcha mb-3" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+          <div class="form-group text-center">
+            
+            <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% comment %} КОНЕЦ {% endcomment %}
+
+  
+
+
+<!-- Telegram -->
+<section class="ftco-section-parallax" style="display: none;">
+  <div class="hero-wrap-2">
+    <div class="overlay-2"></div>
+    <div id="particles-js-2"></div>
+    <div class="parallax-img d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2>Telegram</h2>
+            <p>Присоединяйся к нам, мы рассказываем о многих тонкостях и особенностях цифрового бизнеса</p>
+            <div class="row d-flex justify-content-center mt-5">
+              <div class="col-md-6">
+                <a href="https://t.me/+As9CGvSoJn5mYzRi" class="btn btn-primary btn-block ps-3 pe-3 pt-3 pb-3 d-block btn-telegram" target="_blank">Присоединиться к нам в Telegram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END  -->
+{% endblock content %}

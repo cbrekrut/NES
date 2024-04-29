@@ -1,0 +1,527 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <meta charset="utf-8">
+    <meta name="yandex-verification" content="f93a1d5ed48593b6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <meta name="description" content="NES@Agency - ваш надежный партнер в цифровой трансформации.У нас вы можете заказать сайт, консультацию в сфере ИИ и даже автоматизацию бизнес-процессов">
+    <meta name="keywords" content="NES@Agency, веб-разработка, цифровая трансформация, IT-агентство, создание веб-сайтов, цифровое агентство, заказать сайт, веб-приложения, искусственный интеллект тверь, заказть сайт тверь, купить сайт тверь, заказть сайт">
+
+    <meta name="author" content="NES@Agency">
+    <title>NES@Agency</title>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(97030639, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/97030639" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'images/site.webmanifest'%}">
+    <link rel="mask-icon" href="{% static 'images/safari-pinned-tab.svg'%}" color="#5bbad5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <title>NES@Agency</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Меню
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item"><a href="{% url 'home'%}" class="nav-link">Главная</a></li>
+            <li class="nav-item"><a href="{% url 'prices'%}" class="nav-link">Услуги и цены</a></li>
+            <li class="nav-item"><a href="{% url 'portfolio'%}" class="nav-link">Портфолио</a></li>
+            <li class="nav-item"><a href="{% url 'contact'%}" class="nav-link">Контакты</a></li>
+          <li class="nav-item cta"><a href="" class="nav-link hero-btn" data-toggle="modal" data-target="#myModal"><span >Заказать вебсайт</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- END nav -->
+    <!-- Модальное окно -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">Оформить заказ</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post" id="form">
+              {% csrf_token %}
+              <div class="form-group">
+                <input id="name" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                <div class="error text-start fs-6 fw-light"></div>
+              </div>
+              <div class="form-group">
+                <input id="email" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                <div class="error text-start fs-6 fw-light"></div>
+              </div>
+              <div class="form-group">
+                <input id="telephone" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                <div class="error text-start fs-6 fw-light"></div>
+              </div>
+              <div class="form-group">
+                <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                <div class="error text-start fs-6 fw-light"></div>
+              </div>
+              <div class="form-group text-center">
+                <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 prices-btn">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- END  -->
+     {% block content %}{% endblock %}
+     <!-- FOOTER -->
+<footer class="ftco-footer ftco-bg-dark ftco-section text-center">
+    <div class="hero-wrap-3">
+      <div class="overlay-3"></div>
+      <div id="particles-js-3"></div>
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md">
+              <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">NES@Agency</h2>
+              </div>
+            </div>
+            <div class="col-md">
+               <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Контактная информация</h2>
+                <ul class="list-unstyled">
+                  <li><a href="tel://89108347811">8(910)834-78-11</a></li>
+                  <li><a href="tel://89969225385">8(966)922-53-85</a></li>
+                  <li><a class="py-2 d-block">www.nes-agency.ru</a></li>
+                  <li><a href="mailto:nes.agency@yandex.ru">nes.agency@yandex.ru</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="ftco-footer-widget mb-4">
+                <ul class="ftco-footer-social list-unstyled">
+                  <li class="ftco-animate"><a href="https://t.me/+As9CGvSoJn5mYzRi"><span class="icon-telegram"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p>NES@Agency <script>document.write(new Date().getFullYear());</script></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+      <!-- END  -->
+    
+  
+    
+   
+     <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#000"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#fff"/></svg></div>
+  
+  
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+    <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+    <script src="{% static 'js/particles.min.js' %}"></script>
+    <script src="{% static 'js/particle.js' %}"></script>
+    <script src="{% static 'js/scrollax.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- КВИЗ -->
+  <script>
+     document.addEventListener('DOMContentLoaded', function () {
+      const questions = [
+          { question: "Сколько страниц вы хотите на сайте?", answers: ["Одностаничный", "Многостраничный", "Не знаю"] },
+          { question: "Для чего вам нужен сайт?", answers: ["Рассказать о компании","Продавать 1 товар","Продавать 2-3 товара", "Продавать >3 товаров"] },
+          { question: "Какая ваша целевая аудитория?", answers: ["Бизнес", "Частные лица", "Не знаю", "Другое"] },
+          { question: "Какой ваш бюджет на проект?", answers: ["Менее 50.000 Р.", "от 50.000 Р. до 100.000 Р.", "Более 100.000"] }
+      ];
+      let currentQuestionIndex = 0;
+      let responses = [];
+  
+      const quizContainer = document.getElementById('quizQuestions');
+      const progressBar = document.querySelector('.progress-bar');
+      const nextButton = document.getElementById('nextQuestion');
+  
+      function createQuestion(index) {
+      const question = questions[index];
+      const questionDiv = document.createElement('div');
+      questionDiv.classList.add('question');
+  
+      const questionText = document.createElement('h3');
+      questionText.textContent = question.question;
+      questionDiv.appendChild(questionText);
+  
+      const answersDiv = document.createElement('div');
+      answersDiv.classList.add('answer-block');
+  
+      question.answers.forEach(answer => {
+          const input = document.createElement('input');
+          input.type = 'radio';
+          input.id = `answer${index}_${answer}`;
+          input.name = `answer${index}`;
+          input.value = answer;
+  
+          const label = document.createElement('label');
+          label.setAttribute('for', `answer${index}_${answer}`);
+          label.textContent = answer;
+  
+          answersDiv.appendChild(input);
+          answersDiv.appendChild(label);
+      });
+  
+      questionDiv.appendChild(answersDiv);
+      questionDiv.style.display = 'none';
+      quizContainer.appendChild(questionDiv);
+  }
+  
+      function showQuestion(index) {
+          const questions = document.querySelectorAll('.question');
+          questions.forEach(q => q.style.display = 'none');
+          if (questions[index]) {
+              questions[index].style.display = 'block';
+              updateProgressBar(index, questions.length);
+          }
+      }
+  
+      function updateProgressBar(current, total) {
+          const width = (current / total) * 100;
+          progressBar.style.width = `${width}%`;
+          progressBar.setAttribute('aria-valuenow', width);
+      }
+      function analyzeResponses() {
+        // Анализ ответов для определения рекомендации
+        const isSinglePage = responses[0] === "Одностаничный";
+        const isMultiPage = responses[0] === "Многостраничный";
+        const salesSite1 = responses[1] === "Продавать 1 товар";
+        const salesSite2 = responses[1] === "Продавать 2-3 товара";
+        const salesSite3 = responses[1] === "Продавать >3 товаров";
+        const companySite = responses[1]==="Рассказать о компании";
+        const isBusiness = responses[2] === "Бизнес";
+        const isComers = responses[2] === "Частные лица"
+        const highBudget = responses[3] === "Более 100.000 Р.";
+
+        if (isSinglePage && salesSite1) {
+            return "Лендинг";
+        }else if (salesSite2) {
+            return "Мультилендинг";
+        }
+         else if (companySite) {
+            return "Корторативный сайт";
+        } else if (salesSite3) {
+            return "Интернет-магазин";
+        } else {
+            return "Лендинг";
+        }
+    }
+      function displayResults() {
+          quizContainer.innerHTML = ''; // Очистить контейнер вопросов
+          progressBar.style.width = `100%`;
+          nextButton.style.display = 'none';
+          const recommendationDiv = document.createElement('div');
+          recommendationDiv.classList.add('recommendation');
+          recommendationDiv.innerHTML = `<h3>Вам подойдет ${analyzeResponses()}</h3>`;
+          recommendationDiv.style.textAlign = 'center';
+          recommendationDiv.style.padding = '3rem';
+          const viewRatesButton = document.createElement('button');
+          viewRatesButton.textContent = 'Посмотреть тарифы';
+          viewRatesButton.classList.add('btn', 'btn-primary', 'py-3', 'px-5','mt-5');
+          viewRatesButton.onclick = function () {
+              window.location.href = 'prices'; // Переход на страницу тарифов
+          };
+  
+          recommendationDiv.appendChild(viewRatesButton);
+          quizContainer.appendChild(recommendationDiv);
+      }
+  
+      nextButton.addEventListener('click', function () {
+          const selectedAnswer = document.querySelector(`input[name="answer${currentQuestionIndex}"]:checked`);
+          if (!selectedAnswer) {
+              alert('Пожалуйста, выберите ответ перед переходом к следующему вопросу.');
+              return;
+          }
+          responses.push(selectedAnswer.value);
+  
+          if (currentQuestionIndex < questions.length - 1) {
+              currentQuestionIndex++;
+              showQuestion(currentQuestionIndex);
+          } else {
+              displayResults();
+          }
+      });
+  
+      questions.forEach((_, index) => createQuestion(index));
+      showQuestion(0);
+  });
+  </script>
+  
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const text = 'NES@Agency';
+        const typingSpeed = [100,400,200,500,100,400,20,300,50,100];
+        let index = 0;
+        const target = document.querySelector('.navbar-brand');
+        
+        function typeLetter() {
+          if (index < text.length) {
+            target.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeLetter, typingSpeed[index]);
+          }
+        }
+        
+        typeLetter();
+      });
+    </script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      const form1 = document.getElementById('form1');
+      const name1 = document.getElementById('name1');
+      const email1 = document.getElementById('email1');
+      const telephone1 = document.getElementById('telephone1');
+      
+      const setError1 = (element, message) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector('.error');
+  
+          errorDisplay.innerText = message;
+          inputControl.classList.add('error');
+          inputControl.classList.remove('success')
+      };
+  
+      const setSuccess1 = element => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector('.error');
+  
+          errorDisplay.innerText = '';
+          inputControl.classList.add('success');
+          inputControl.classList.remove('error');
+      };
+  
+      const isValidEmail1 = email1 => {
+          const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(String(email1).toLowerCase());
+      }
+  
+      const isValidTelephone1 = telephone1 => {
+          const re = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+          return re.test(String(telephone1).toLowerCase());
+      }
+  
+      const validateInputs1 = () => {
+          const nameValue = name1.value.trim();
+          const emailValue = email1.value.trim();
+          const telephoneValue = telephone1.value.trim();
+          
+          let flag = true;
+  
+          if (nameValue == '' || nameValue == null) {
+              setError(name1, 'Имя не может быть пустым');
+              flag = flag && false;
+          } else {
+              setSuccess(name1)
+              flag = flag && true;
+          }
+  
+          if (emailValue == '' || emailValue == null) {
+              setError(email1, 'Email не может быть пустым');
+              flag = flag && false;
+          } else if (!isValidEmail(emailValue)) {
+              setError(email1, 'Некорректный email адрес');
+              flag = flag && false;
+          } else {
+              setSuccess(email1);
+              flag = flag && true;
+          }
+  
+          if (telephoneValue == '' || telephoneValue == null) {
+              setError(telephone1, 'Номер телефона не может быть пустым');
+              flag = flag && false;
+          } else if (!isValidTelephone(telephoneValue)) {
+              setError(telephone1,' Некорректный номер телефона');
+              flag = flag && false;
+          } else {
+              setSuccess(telephone1);
+              flag = flag && true;
+          }
+          return flag;
+  
+          
+  
+  
+      };
+  
+      form1.addEventListener('submit', e => {
+          if (!validateInputs1()){
+              e.preventDefault();
+          }
+      });
+  </script>
+    <script>
+      const form = document.getElementById('form');
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const telephone = document.getElementById('telephone');
+      
+      const setError = (element, message) => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector('.error');
+  
+          errorDisplay.innerText = message;
+          inputControl.classList.add('error');
+          inputControl.classList.remove('success')
+      };
+  
+      const setSuccess = element => {
+          const inputControl = element.parentElement;
+          const errorDisplay = inputControl.querySelector('.error');
+  
+          errorDisplay.innerText = '';
+          inputControl.classList.add('success');
+          inputControl.classList.remove('error');
+      };
+  
+      const isValidEmail = email => {
+          const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(String(email).toLowerCase());
+      }
+  
+      const isValidTelephone = telephone => {
+          const re = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+          return re.test(String(telephone).toLowerCase());
+      }
+  
+      const validateInputs = () => {
+          const nameValue = name.value.trim();
+          const emailValue = email.value.trim();
+          const telephoneValue = telephone.value.trim();
+          
+          let flag = true;
+  
+          if (nameValue == '' || nameValue == null) {
+              setError(name, 'Имя не может быть пустым');
+              flag = flag && false;
+          } else {
+              setSuccess(name)
+              flag = flag && true;
+          }
+  
+          if (emailValue == '' || emailValue == null) {
+              setError(email, 'Email не может быть пустым');
+              flag = flag && false;
+          } else if (!isValidEmail(emailValue)) {
+              setError(email, 'Некорректный email адрес');
+              flag = flag && false;
+          } else {
+              setSuccess(email);
+              flag = flag && true;
+          }
+  
+          if (telephoneValue == '' || telephoneValue == null) {
+              setError(telephone, 'Номер телефона не может быть пустым');
+              flag = flag && false;
+          } else if (!isValidTelephone(telephoneValue)) {
+              setError(telephone,' Некорректный номер телефона');
+              flag = flag && false;
+          } else {
+              setSuccess(telephone);
+              flag = flag && true;
+          }
+          return flag;
+  
+          
+  
+  
+      };
+  
+      form.addEventListener('submit', e => {
+          if (!validateInputs()){
+              e.preventDefault();
+          }
+      });
+  </script>
+  <script>
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    // Добавляем обработчик события на клик по ссылкам в меню
+    var navbarLinks = document.querySelectorAll('.nav-item .nav-link');
+    navbarLinks.forEach(function(navbarLink) {
+      navbarLink.addEventListener('click', function() {
+        // Если меню открыто на мобильном устройстве, скрываем его после клика по ссылке
+        if (navbarCollapse.classList.contains('show')) {
+          navbarCollapse.classList.remove('show');
+        }
+      });
+    });
+  </script>
+
+
+    </body>
+  </html>
