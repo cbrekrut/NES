@@ -8402,10 +8402,8 @@ textarea.form-control {
 /* Стиль содержимого модального окна */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% от верха и по центру */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Можно изменить на более узкий */
+  margin-top: 15%; /* 15% от верха и по центру */
+  border: 1px solid #888; /* Можно изменить на более узкий */
 }
 
 .modal-backdrop {
@@ -9571,4 +9569,9 @@ textarea.form-control {
 .prices-btn:hover{
   background-color: black !important;
   color: white !important;
+}
+
+iframe {
+  max-width: 100% !important;
+  width:100% !important;
 }

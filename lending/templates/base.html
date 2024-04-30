@@ -81,7 +81,7 @@
             <li class="nav-item"><a href="{% url 'prices'%}" class="nav-link">Услуги и цены</a></li>
             <li class="nav-item"><a href="{% url 'portfolio'%}" class="nav-link">Портфолио</a></li>
             <li class="nav-item"><a href="{% url 'contact'%}" class="nav-link">Контакты</a></li>
-          <li class="nav-item cta"><a href="" class="nav-link hero-btn" data-toggle="modal" data-target="#myModal"><span >Заказать вебсайт</span></a></li>
+          <li class="nav-item cta"><a href="" class="nav-link hero-btn" data-toggle="modal" data-target="#myModal"><span>Заказать вебсайт</span></a></li>
         </ul>
       </div>
     </div>
@@ -117,7 +117,7 @@
                 <div class="error text-start fs-6 fw-light"></div>
               </div>
               <div class="form-group text-center">
-                <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                <div data-size="compact" data-theme="dark" class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
                 <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 prices-btn">
               </div>
             </form>
@@ -192,16 +192,16 @@
     <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
     <script src="{% static 'js/particles.min.js' %}"></script>
     <script src="{% static 'js/particle.js' %}"></script>
-    <script src="{% static 'js/scrollax.min.js' %}"></script>
+    {% comment %} <script src="{% static 'js/scrollax.min.js' %}"></script> {% endcomment %}
     <script src="{% static 'js/main.js' %}"></script>
     <!-- КВИЗ -->
   <script>
      document.addEventListener('DOMContentLoaded', function () {
       const questions = [
-          { question: "Сколько страниц вы хотите на сайте?", answers: ["Одностаничный", "Многостраничный", "Не знаю"] },
+          { question: "Сколько страниц вы хотите на сайте?", answers: ["Одностраничный", "Многостраничный", "Не знаю"] },
           { question: "Для чего вам нужен сайт?", answers: ["Рассказать о компании","Продавать 1 товар","Продавать 2-3 товара", "Продавать >3 товаров"] },
           { question: "Какая ваша целевая аудитория?", answers: ["Бизнес", "Частные лица", "Не знаю", "Другое"] },
-          { question: "Какой ваш бюджет на проект?", answers: ["Менее 50.000 Р.", "от 50.000 Р. до 100.000 Р.", "Более 100.000"] }
+          { question: "Какой ваш бюджет на проект?", answers: ["Менее 50.000 Р.", "от 50.000 Р. до 100.000 Р.", "Более 100.000 Р."] }
       ];
       let currentQuestionIndex = 0;
       let responses = [];
@@ -258,7 +258,7 @@
       }
       function analyzeResponses() {
         // Анализ ответов для определения рекомендации
-        const isSinglePage = responses[0] === "Одностаничный";
+        const isSinglePage = responses[0] === "Одностраничный";
         const isMultiPage = responses[0] === "Многостраничный";
         const salesSite1 = responses[1] === "Продавать 1 товар";
         const salesSite2 = responses[1] === "Продавать 2-3 товара";
@@ -274,7 +274,7 @@
             return "Мультилендинг";
         }
          else if (companySite) {
-            return "Корторативный сайт";
+            return "Корпоративный сайт";
         } else if (salesSite3) {
             return "Интернет-магазин";
         } else {
@@ -290,12 +290,11 @@
           recommendationDiv.innerHTML = `<h3>Вам подойдет ${analyzeResponses()}</h3>`;
           recommendationDiv.style.textAlign = 'center';
           recommendationDiv.style.padding = '3rem';
-          const viewRatesButton = document.createElement('button');
+          const viewRatesButton = document.createElement('a');
+          viewRatesButton.setAttribute('href', '{% url "prices" %}');
           viewRatesButton.textContent = 'Посмотреть тарифы';
           viewRatesButton.classList.add('btn', 'btn-primary', 'py-3', 'px-5','mt-5');
-          viewRatesButton.onclick = function () {
-              window.location.href = 'prices'; // Переход на страницу тарифов
-          };
+          viewRatesButton.style.width = '100%';
   
           recommendationDiv.appendChild(viewRatesButton);
           quizContainer.appendChild(recommendationDiv);
