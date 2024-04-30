@@ -53,7 +53,9 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   max-width: 100vw !important; 
-  overflow-x: hidden !important; }
+  overflow-x: hidden !important; 
+  scroll-behavior: smooth;}
+
 
 @-ms-viewport {
   width: device-width; }
@@ -1853,6 +1855,16 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   background-color: rgba(220, 53, 69, 0.8);
   border-radius: .2rem; }
 
+.modal.show {
+ animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+ }
+
+
 .was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
 .custom-select:invalid,
 .custom-select.is-invalid {
@@ -3341,7 +3353,8 @@ input[type="button"].btn-block {
   border: 1px solid transparent;
   border-radius: 0.25rem; }
   .navbar-toggler:hover, .navbar-toggler:focus {
-    text-decoration: none; }
+    text-decoration: none;
+    box-shadow: none !important; }
   .navbar-toggler:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
@@ -3642,6 +3655,7 @@ input[type="button"].btn-block {
 .card-subtitle {
   margin-top: -0.375rem;
   margin-bottom: 0; }
+
 
 .card-text:last-child {
   margin-bottom: 0; }
@@ -4351,6 +4365,7 @@ input[type="button"].btn-block {
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
+  transition: all 0.3s ease;
   opacity: .5; }
   .close:hover, .close:focus {
     color: #000;
@@ -4358,6 +4373,8 @@ input[type="button"].btn-block {
     opacity: .75; }
   .close:not(:disabled):not(.disabled) {
     cursor: pointer; }
+
+
 
 button.close {
   padding: 0;
@@ -7469,6 +7486,17 @@ h1, h2, h3, h4, h5,
   font-size: 20px;
   text-transform: uppercase; }
 
+.ftco-navbar-light.scrolled.awake .hero-btn:hover{
+  background-color: white !important;
+  color: black !important;
+  outline: 1px solid black !important;
+}
+.ftco-navbar-light.scrolled.awake a:hover{
+  transition: all 0.3s !important;
+}
+.ftco-navbar-light.scrolled.awake a:hover{
+  color: #848484 !important;
+}
 /* HEADING */
 .hero-wrap {
   width: 100%;
@@ -8259,7 +8287,7 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 4em 0;
+  padding: 8em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
@@ -8374,10 +8402,8 @@ textarea.form-control {
 /* Стиль содержимого модального окна */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% от верха и по центру */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Можно изменить на более узкий */
+  margin-top: 15%; /* 15% от верха и по центру */
+  border: 1px solid #888; /* Можно изменить на более узкий */
 }
 
 .modal-backdrop {
@@ -8758,7 +8784,9 @@ textarea.form-control {
   .block-7 .price {
     margin: 0;
     padding: 0;
-    display: block; }
+    display: block;
+    color:black;
+   }
     .block-7 .price sup {
       font-size: 20px;
       top: -2em; }
@@ -9284,14 +9312,31 @@ textarea.form-control {
 
 .prices {
   color: black;
-  width: 90vw !important;
+  
 }
 
 .prices-container {
-  width: 90vw !important;
-  margin: 0 !important;
-  max-width: none !important;
+  
 }
+
+
+.card-body{
+  border-radius: 10px;
+  transition: background-color 0.3s ease !important;
+}
+
+.card-body:hover{
+  background-color: #fff !important;
+}
+
+/* 
+.card-text{
+  transition: color 0.3 ease !important;
+}
+
+.card-body:hover .card-text{
+  color: white !important;
+}  */
 
 .btn-prices-first{
   background: linear-gradient(to right, #8ffbff, #2072ff, #1322c1);
@@ -9301,8 +9346,15 @@ textarea.form-control {
   border: none;
   transition: background-position 0.5s ease-in-out !important;
 }
-
 .btn-prices-first:hover{
+  background-position: 0 0;
+}
+
+#card1:hover .btn-prices-first{
+  background-position: 0 0;
+}
+
+#card6:hover .btn-prices-first{
   background-position: 0 0;
 }
 
@@ -9319,6 +9371,10 @@ textarea.form-control {
   background-position: 0 0;
 }
 
+#card2:hover .btn-prices-second{
+  background-position: 0 0;
+}
+
 .btn-prices-third {
   background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
   background-position: 100% 0;
@@ -9329,6 +9385,14 @@ textarea.form-control {
 }
 
 .btn-prices-third:hover{
+  background-position: 0 0;
+}
+
+#card3:hover .btn-prices-third{
+  background-position: 0 0;
+}
+
+#card5:hover .btn-prices-third{
   background-position: 0 0;
 }
 
@@ -9343,4 +9407,171 @@ textarea.form-control {
 
 .btn-prices-fourth:hover{
   background-position: 0 0;
+}
+
+#card4:hover .btn-prices-fourth{
+  background-position: 0 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ffffff, #a4a4a4);
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #a4a4a4, 0 0 40px #a4a4a4, 0 0 50px #a4a4a4;
+}
+
+::-webkit-scrollbar :hover {
+  width: 50px;
+}
+
+@keyframes rainbow-text {
+  0%,100% {
+      background-position: 0 0;
+  }
+  50% {
+      background-position: 100% 0;
+  }
+}
+
+.rainbow-text {
+  background: linear-gradient(90deg, black, gray,black);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: rainbow-text 5s linear infinite;
+}
+
+.block-11 {
+  border: 1px solid #DDD;
+  padding: 20px;
+  background: #FFF;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+}
+
+.block-11 .price {
+  font-size: 2rem;
+  color:black;
+}
+
+.block-11 .number {
+  font-size: 3rem;
+}
+
+.block-11 ul.pricing-text {
+  font-size: 1rem!important;
+  list-style:inside !important;
+  padding: 0;
+  margin: 3px 0;
+}
+
+.block-11 ul.pricing-text li {
+  color:black !important;
+  margin-bottom: 2px;
+}
+
+#accordion .panel{
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  margin-bottom: 10px;
+  background-color: white !important;
+  color: black !important;
+}
+#accordion .panel-heading{
+  padding: 0;
+  border: none;
+  border-radius:0px;
+  position: relative;
+  color: black !important;
+}
+#accordion .panel-title a{
+  display: block;
+  padding: 20px 30px;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 0px;
+  position: relative;
+  color: black !important;
+}
+
+@media only screen and (max-width: 768px) {
+  #accordion .panel-title a {
+     font-size: 0.7rem;
+     font-weight: 600;
+  }
+ }
+#accordion .panel-title a.collapsed{ border: none; }
+#accordion .panel-title a:before,
+#accordion .panel-title a.collapsed:before{
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  width: 30px;
+  height: 30px;
+  line-height: 27px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  transform: rotate(180deg);
+  transition: all .4s cubic-bezier(0.080, 1.090, 0.320, 1.275);
+  color: black !important;
+}
+#accordion .panel-title a.collapsed:before{
+  color: rgba(255,255,255,0.5);
+  transform: rotate(0deg);
+  color: black !important;
+}
+#accordion .panel-body{
+  padding: 20px 30px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 28px;
+  letter-spacing: 1px;
+  border-top: none;
+  border-radius: 0px;
+  color: grey !important;
+}
+
+.hero-btn{
+  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease !important;
+}
+
+.hero-btn:hover{
+  color: black !important;
+  background-color: white !important;
+  border-color: white !important;
+}
+
+.prices-btn{
+  transition: all 0.3s ease !important;
+}
+
+.prices-btn:hover{
+  background-color: black !important;
+  color: white !important;
+}
+
+iframe {
+  max-width: 100% !important;
+  width:100% !important;
 }

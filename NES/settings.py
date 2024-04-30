@@ -19,6 +19,7 @@ ALLOWED_HOSTS = ['nes-agency.ru','*','www.nes-agency.ru']
 # Application definition
 
 INSTALLED_APPS = [
+    'django_recaptcha',
     'lending',
     'django.contrib.sitemaps',
     'django.contrib.admin',
@@ -27,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 ]
 
 MIDDLEWARE = [
@@ -106,8 +108,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = 'static/'
+STATIC_ROOT = "staticfiles"
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+RECAPTCHA_PUBLIC_KEY = '6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9'
+RECAPTCHA_PRIVATE_KEY = '6LdDOcspAAAAAJPVW3GEKGSgPzU85HiiCEbPFXtz'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
