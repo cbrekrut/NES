@@ -7,36 +7,36 @@
 
 	"use strict";
 
-	var isMobile = {
-		Android: function() {
-			return navigator.userAgent.match(/Android/i);
-		},
-			BlackBerry: function() {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-			iOS: function() {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-			Opera: function() {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-			Windows: function() {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-			any: function() {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
+// 	var isMobile = {
+// 		Android: function() {
+// 			return navigator.userAgent.match(/Android/i);
+// 		},
+// 			BlackBerry: function() {
+// 			return navigator.userAgent.match(/BlackBerry/i);
+// 		},
+// 			iOS: function() {
+// 			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+// 		},
+// 			Opera: function() {
+// 			return navigator.userAgent.match(/Opera Mini/i);
+// 		},
+// 			Windows: function() {
+// 			return navigator.userAgent.match(/IEMobile/i);
+// 		},
+// 			any: function() {
+// 			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+// 		}
+// 	};
 
 
-	$(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: 'scroll'
-  });
+// 	$(window).stellar({
+//     responsive: true,
+//     parallaxBackgrounds: true,
+//     parallaxElements: true,
+//     horizontalScrolling: false,
+//     hideDistantElements: false,
+//     scrollProperty: 'scroll'
+//   });
 
 
 	var fullHeight = function() {
@@ -60,7 +60,7 @@
 	loader();
 
 	// Scrollax
-   $.Scrollax();
+  $.Scrollax();
 
 	var carousel = function() {
 		$('.carousel-testimony').owlCarousel({

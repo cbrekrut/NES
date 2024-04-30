@@ -16,7 +16,7 @@ def verify_recaptcha(response_token):
     verify_url = 'https://www.google.com/recaptcha/api/siteverify'
     response = requests.post(verify_url, data=data)
     return response.json()
-def home(request):
+def index(request):
 
     if request.method == "POST":
         recaptcha_response = request.POST.get('g-recaptcha-response')

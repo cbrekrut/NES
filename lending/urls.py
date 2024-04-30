@@ -10,7 +10,7 @@ sitemaps = {
 }
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.index, name='index'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('portfolio/<int:id>/', views.portfolio_ident, name='portfolio_ident'),
     path('contact/', views.contact, name='contact'),
