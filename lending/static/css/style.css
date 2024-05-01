@@ -9575,3 +9575,11 @@ iframe {
   max-width: 100% !important;
   width:100% !important;
 }
+
+.captcha-alert {
+  z-index: 10000!important;
+  background-color: rgba(255, 0, 0, 0.529);
+  color:white !important;
+  position: fixed;
+  backdrop-filter: blur(10px);
+}

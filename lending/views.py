@@ -30,6 +30,8 @@ def index(request):
             message = f"Новый заказ!\nИмя: {name}\nEmail: {email}\nТелефон: {telephone}\nОписание: {textarea}"
             bot.send_message(TELEGRAM_CHAT_ID, message)
             return redirect('thanks')
+        else:
+            return render(request, 'index.html',{'alert':True})
     return render(request, 'index.html')
 
 def portfolio(request):
@@ -44,6 +46,9 @@ def portfolio(request):
             message = f"Новый заказ!\nИмя: {name}\nEmail: {email}\nТелефон: {telephone}\nОписание: {textarea}"
             bot.send_message(TELEGRAM_CHAT_ID, message)
             return redirect('thanks')
+        else:
+            projects = Project.objects.all()
+            return render(request, 'portfolio.html',{'alert':True})
     projects = Project.objects.all()
     return render(request, 'portfolio.html',{'projects':projects})
 
@@ -59,6 +64,9 @@ def portfolio_ident(request, id):
             message = f"Новый заказ!\nИмя: {name}\nEmail: {email}\nТелефон: {telephone}\nОписание: {textarea}"
             bot.send_message(TELEGRAM_CHAT_ID, message)
             return redirect('thanks')
+        else:
+            project = get_object_or_404(Project, id=id)
+            return render(request, 'portfolio.html',{'alert':True, 'project':project})
     project = get_object_or_404(Project, id=id)
     return render(request, 'portfolio.html',{'project':project})
 
@@ -76,6 +84,8 @@ def contact(request):
             message = f"Новый заказ!\nИмя: {name}\nEmail: {email}\nТелефон: {telephone}\nОписание: {textarea}"
             bot.send_message(TELEGRAM_CHAT_ID, message)
             return redirect('thanks')
+        else:
+            return render(request, 'contact.html',{'alert':True})
     return render(request, 'contact.html')
 
 def prices(request):
@@ -90,6 +100,8 @@ def prices(request):
             message = f"Новый заказ!\nИмя: {name}\nEmail: {email}\nТелефон: {telephone}\nОписание: {textarea}"
             bot.send_message(TELEGRAM_CHAT_ID, message)
             return redirect('thanks')
+        else:
+            return render(request, 'prices.html',{'alert':True})
     return render(request, 'prices.html')
 
 def thanks(request):

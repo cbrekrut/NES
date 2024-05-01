@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#waun7n%*v6qp8@k&1%-vxl4^0#*e8=v())e3w%ew=bdroqsi0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['nes-agency.ru','*','www.nes-agency.ru']
 
@@ -109,10 +109,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = "static/"
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    BASE_DIR / "NES/media",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     BASE_DIR / "NES/media",
+# ]
 
 MEDIA_URL = 'NES/media/'
 MEDIA_ROOT = BASE_DIR / 'NES/media/'

@@ -63,7 +63,17 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
-    
+    {% if alert %}
+    <div class="container captcha-alert pb-2 pt-2" id="captcha-alert" style="width:100vw; max-width:100vw; margin:0;">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h4 style="color:aliceblue;">Не удалось отправить форму</h4>
+          <p class="fs-5">Пожалуйста, пройдите проверку на робота.</p>
+          <a href="" data-toggle="modal" data-target="#myModal" onclick="closeAlert()" class="btn btn-primary btn-outline-white px-5 py-3 hero-btn">Заполнить еще раз</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
   <nav class="navbar navbar-expand-lg bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="/"></a>
@@ -514,6 +524,12 @@
         }
       });
     });
+  </script>
+  <script>
+    function closeAlert() {
+        var alertDiv = document.getElementById('captcha-alert');
+        alertDiv.style.display = 'none';  // Скрываем элемент
+    }
   </script>
     </body>
   </html>
