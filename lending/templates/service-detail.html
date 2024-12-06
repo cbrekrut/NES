@@ -1,0 +1,1195 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- <div class="js-fullheight"> -->
+    <div class="hero-wrap js-fullheight">
+      <div class="overlay"></div>
+      <div id="particles-js"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span style="opacity: 0.7;">Услуга</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                {% if service_name == 'landing' %}
+                Разработка лендинга
+                {% elif service_name == 'multilanding' %}
+                Разработка мультилендинга
+                {% elif service_name == 'corpotative' %}
+                Разработка корпоративного сайта
+                {% elif service_name == 'ecom' %}
+                Разработка интернет-магазина
+                {% elif service_name == 'catalog' %}
+                Разработка каталога
+                {% elif service_name == 'redisign' %}
+                Редизайн сайта
+                {% elif service_name == 'CRM' %}
+                Внедрение и автоматизация CRM системы
+                {% elif service_name == 'adds' %}
+                Контекстная реклама
+                {% elif service_name == 'maintenance' %}
+                Ведение сайта
+                {% elif service_name == 'SEO' %}
+                SEO оптимизация
+                {% elif service_name == 'hosting' %}
+                Хостинг сайта
+                {% endif %}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+{% if service_name == 'landing' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Создание эффективных лендингов для вашего бизнеса</h2><br>
+                <p class="mb-4">Привлекайте клиентов и увеличивайте конверсии с нашими профессиональными лендингами</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Простота и удобство
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Наши лендинги интуитивно понятны и просты в использовании, что позволяет вашим клиентам быстро найти необходимую информацию.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Адаптивность
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Все наши лендинги оптимизированы для любых устройств, будь то смартфоны, планшеты или компьютеры.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Быстрая загрузка
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Мы обеспечиваем высокую скорость загрузки страниц, чтобы ваши клиенты не тратили время на ожидание.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                  Наполнение сайта
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Подготовка продуманных текстов, УТП (уникальных торговых предложений), триггеров, делающих ваш сайт интересным для потенциальных клиентов.  </p>
+                          </div>
+                      </div>
+                   </div>
+                   <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Маркетинговая составляющая
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <p>В проектировании и разработке участвуют разные профильные специалисты: маркетолог, дизайнер, верстальщик, программист, копирайтер, SEO-оптимизатор. Благодаря этому будут соблюдены все требования интернет-маркетинга. Мы делаем удобные, красивые, продающие сайты, и их легко продвигать в ТОП поисковых систем.  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingSix">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                  Высокий показатель конверсий
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                          <div class="panel-body">
+                              <p>При эффективной маркетинговой стратегии вы получите высокие конверсии уже в первые недели работы. </p>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% elif service_name == 'multilanding' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Мультилендинг для максимального попадания в запрос</h2><br>
+                <p class="mb-4">Привлекайте разные сегменты аудитории с помощью индивидуальных решений</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Персонализация
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Создаем уникальные лендинги для каждой целевой аудитории, что позволяет максимально точно донести ваше предложение.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Эффективность
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Наши мультилендинги увеличивают конверсии за счет использования точных и релевантных маркетинговых сообщений.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Гибкость
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Настраиваем мультилендинги под разные рекламные кампании и каналы для достижения наилучших результатов.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                SEO-оптимизация
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Все мультилендинги создаются с учетом SEO-требований, что помогает улучшить видимость вашего сайта в поисковых системах.</p>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% elif service_name == 'corpotative' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Корпоративный лендинг для вашего бизнеса</h2><br>
+                <p class="mb-4">Укрепляйте репутацию и улучшайте взаимодействие с клиентами</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Профессиональный дизайн
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Мы создаем современные и солидные корпоративные лендинги, которые подчеркивают статус вашего бизнеса.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Адаптивность
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Наши корпоративные лендинги адаптируются под все устройства, обеспечивая удобство для всех пользователей.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Интеграции
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Мы предлагаем возможность интеграции вашего корпоративного лендинга с CRM, ERP и другими системами для повышения эффективности бизнеса.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                SEO-оптимизация
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Наши лендинги оптимизированы для поисковых систем, что позволяет улучшить видимость вашего сайта и привлечь больше клиентов.</p>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% elif service_name == 'ecom' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Создание интернет-магазина под ключ</h2><br>
+                <p class="mb-4">Продавайте онлайн с нашим профессиональным решением</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Удобство и простота
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Наши интернет-магазины обладают интуитивно понятным интерфейсом, что делает процесс покупки легким и приятным для ваших клиентов.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Адаптивный дизайн
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Мы разрабатываем интернет-магазины, которые отлично отображаются на любых устройствах, обеспечивая удобство использования как на компьютерах, так и на мобильных устройствах.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Интеграция с платежными системами
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Наши решения поддерживают интеграцию с популярными платежными системами, такими как PayPal, Яндекс.Деньги, банковские карты и другие, что позволяет вашим клиентам выбирать удобный способ оплаты.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                SEO-оптимизация
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Все наши интернет-магазины создаются с учетом SEO, что помогает улучшить их видимость в поисковых системах и привлечь больше покупателей.</p>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% elif service_name == 'catalog' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Создание каталога товаров под ключ</h2><br>
+                <p class="mb-4">Представьте ваш ассортимент с нашим профессиональным решением</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Удобство и простота
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Наши каталоги обладают интуитивно понятным интерфейсом, что делает процесс ознакомления с вашими товарами легким и приятным для ваших клиентов.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Адаптивный дизайн
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Мы разрабатываем каталоги, которые отлично отображаются на любых устройствах, обеспечивая удобство использования как на компьютерах, так и на мобильных устройствах.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Интеграция с CRM
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Наши решения поддерживают интеграцию с популярными CRM системами, что позволяет вам эффективно управлять взаимодействием с клиентами.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                SEO-оптимизация
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Все наши каталоги создаются с учетом SEO, что помогает улучшить их видимость в поисковых системах и привлечь больше покупателей.</p>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% elif service_name == 'redisign' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Редизайн сайта для вашего бизнеса</h2><br>
+                <p class="mb-4">Обновите ваш сайт и привлекайте больше клиентов</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Современный дизайн
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Мы создаем обновленный и привлекательный внешний вид вашего сайта, который соответствует современным тенденциям и предпочтениям вашей аудитории.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Улучшенная навигация
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Оптимизируем структуру и навигацию сайта, чтобы пользователи могли легко находить нужную информацию и совершать целевые действия.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Повышенная скорость
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Оптимизируем ваш сайт для быстрой загрузки, что улучшает пользовательский опыт и положительно сказывается на конверсии.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                SEO-оптимизация
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>В процессе редизайна учитываем все требования SEO, что помогает улучшить видимость вашего сайта в поисковых системах и привлечь больше посетителей.</p>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% elif service_name == 'CRM' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Внедрение и автоматизация CRM-систем</h2><br>
+                <p class="mb-4">Оптимизируйте бизнес-процессы с нашими решениями</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Повышение эффективности
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Мы автоматизируем рутинные задачи, что позволяет вашей команде сосредоточиться на важных аспектах бизнеса и повысить продуктивность.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Интеграция с другими системами
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Наши решения позволяют синхронизировать CRM с 1С, Битрикс24 и другими системами, обеспечивая бесшовную интеграцию и обмен данными.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Настройка под ваши нужды
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Мы подходим к каждому проекту индивидуально, настраивая CRM-систему под конкретные нужды вашего бизнеса для максимальной эффективности.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                Обучение и поддержка
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Обучаем ваш персонал работе с новой системой и предоставляем постоянную техническую поддержку, чтобы обеспечить её бесперебойную работу.</p>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% elif service_name == 'adds' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Настройка контекстной рекламы</h2><br>
+                <p class="mb-4">Привлекайте целевую аудиторию с помощью Яндекс Директ и Google Рекламы</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Эффективное привлечение клиентов
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Мы настраиваем контекстную рекламу, чтобы привлечь целевую аудиторию с высокой вероятностью конверсии. Вы получаете клиентов, готовых к покупке.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Оптимизация бюджета
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Наши специалисты следят за эффективностью рекламы и оптимизируют расходы, чтобы вы получали максимальную отдачу от каждого вложенного рубля.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Гибкие настройки
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Индивидуальный подход к настройке рекламных кампаний позволяет нам учитывать особенности вашего бизнеса и достигать поставленных целей.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                Поддержка и аналитика
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Мы постоянно мониторим результаты рекламных кампаний и вносим необходимые изменения для улучшения показателей, предоставляя регулярные отчеты о проделанной работе.</p>
+                          </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% elif service_name == 'maintenance' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Ведение вебсайта</h2><br>
+                <p class="mb-4">Обеспечьте бесперебойную работу вашего сайта с нашей профессиональной поддержкой</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Круглосуточная поддержка
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Мы обеспечиваем круглосуточный мониторинг и оперативное решение всех технических проблем, чтобы ваш сайт всегда работал стабильно и без сбоев.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Безопасность
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Регулярно обновляем программное обеспечение и внедряем современные методы защиты, чтобы обезопасить ваш сайт от киберугроз и атак.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Оптимизация производительности
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Оптимизируем скорость загрузки страниц и улучшаем общую производительность сайта, что способствует лучшему пользовательскому опыту.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                SEO-поддержка
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Следим за сохранением и улучшением позиций вашего сайта в поисковых системах, проводя регулярные SEO-оптимизации.</p>
+                          </div>
+                      </div>
+                   </div>
+                   <div class="panel panel-default ftco-animate">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                              Обновление контента
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <p>Обновляем весь статический контент на сайте: текста, фотографии, товары столько, сколько вам потребуется.</p>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% elif service_name == 'SEO' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>SEO оптимизация</h2><br>
+                <p class="mb-4">Повышайте видимость вашего сайта и привлекайте больше клиентов</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Улучшение позиций в браузерах
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Мы помогаем вашему сайту занять высокие позиции в результатах поиска, что увеличивает его видимость и привлекает больше целевых посетителей.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Анализ и аудит
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Проводим комплексный анализ текущего состояния вашего сайта, выявляем слабые места и разрабатываем план по их устранению.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Техническая оптимизация
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Оптимизируем код, структуру и скорость загрузки сайта, чтобы он соответствовал всем требованиям поисковых систем и обеспечивал лучший пользовательский опыт.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                Контентная стратегия
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Создаем и оптимизируем контент для вашего сайта, чтобы он был релевантным, полезным и способствовал улучшению видимости в поисковых системах.</p>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section> 
+{% elif service_name == 'hosting' %}
+<section class="ftco-section">
+    <div class="container">
+     <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-9 heading-section text-center ftco-animate">
+                <h2>Надежный хостинг для вашего сайта</h2><br>
+                <p class="mb-4">Обеспечьте стабильную работу вашего веб-ресурса с нашими хостинг-услугами</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="heading-section ftco-animate mb-5">
+                    <p class="mb-4 fs-4 fw-bold">Основные преимущества</p>
+                </div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                    Высокая надежность
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Мы гарантируем время безотказной работы 99.9%, что обеспечивает стабильную работу вашего сайта и доступность для посетителей.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Быстрая загрузка
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Наши серверы обеспечивают высокую скорость загрузки страниц, что улучшает пользовательский опыт и положительно сказывается на SEO.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Круглосуточная поддержка
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Наша команда технической поддержки доступна 24/7 для решения всех ваших вопросов и оперативного устранения проблем.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default ftco-animate">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                Безопасность данных
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                              <p>Мы используем современные методы защиты данных и регулярно создаем резервные копии, чтобы обезопасить ваш сайт от потерь и кибератак.</p>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pr-md-5">
+                <form action="" method="post" id="form1">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
+                    <div class="error text-start fs-6 fw-light"></div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                    <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

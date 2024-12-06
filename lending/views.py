@@ -103,6 +103,17 @@ def prices(request):
         else:
             return render(request, 'prices.html',{'alert':True})
     return render(request, 'prices.html')
+    
+def service_detail(request, service_name):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        telephone = request.POST.get('telephone')
+        textarea = request.POST.get('Textarea')
+        message = f"Новый заказ!\nИмя: {name}\nEmail: {email}\nТелефон: {telephone}\nОписание: {textarea}"
+        bot.send_message(TELEGRAM_CHAT_ID, message)
+        return redirect('/thanks')
+    return render(request, 'service-detail.html', {'service_name': service_name})
 
 def thanks(request):
     return render(request, 'thanks.html')
