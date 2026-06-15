@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
     <meta charset="utf-8">
     <meta name="yandex-verification" content="f93a1d5ed48593b6" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -68,17 +66,6 @@
     <link rel="stylesheet" href="{% static 'css/nes-refresh.css' %}">
   </head>
   <body>
-    {% if alert %}
-    <div class="container captcha-alert pb-2 pt-2" id="captcha-alert" style="width:100vw; max-width:100vw; margin:0;">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h4 style="color:aliceblue;">Не удалось отправить форму</h4>
-          <p class="fs-5">Пожалуйста, пройдите проверку на робота.</p>
-          <a href="" data-toggle="modal" data-target="#myModal" onclick="closeAlert()" class="btn btn-primary btn-outline-white px-5 py-3 hero-btn">Заполнить еще раз</a>
-        </div>
-      </div>
-    </div>
-    {% endif %}
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="/"></a>
@@ -129,7 +116,7 @@
                 <div class="error text-start fs-6 fw-light"></div>
               </div>
               <div class="form-group text-center">
-                <div data-size="compact" data-theme="dark" class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
+                <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
                 <input type="submit" value="Оставить заявку" id="submit-button" class="btn btn-primary py-3 px-5 prices-btn">
               </div>
             </form>
