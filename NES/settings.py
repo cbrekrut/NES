@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-#waun7n%*v6qp8@k&1%-vxl4^0#*e8=v())e3w%ew=bdroqsi0'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['nes-agency.ru','*','www.nes-agency.ru']
 
@@ -13,7 +13,6 @@ ALLOWED_HOSTS = ['nes-agency.ru','*','www.nes-agency.ru']
 # Application definition
 
 INSTALLED_APPS = [
-    'django_recaptcha',
     'lending',
     'django.contrib.sitemaps',
     'django.contrib.admin',
@@ -101,18 +100,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = "static/"
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-#     BASE_DIR / "NES/media",
-# ]
+# Статика приложения лежит в lending/static и подхватывается
+# AppDirectoriesFinder автоматически. STATIC_ROOT — отдельная папка для
+# collectstatic (её раздаёт nginx в проде). Раньше STATIC_ROOT='static/'
+# совпадал с STATICFILES_DIRS=[BASE_DIR/'static'], и Django падал с
+# ошибкой staticfiles.E002 на старте — поэтому STATICFILES_DIRS убран,
+# а STATIC_ROOT вынесен в отдельный каталог.
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-MEDIA_URL = 'NES/media/'
-MEDIA_ROOT = BASE_DIR / 'NES/media/'
+# Медиа-файлы (изображения проектов из модели Project).
+# Было 'NES/NES/media/' — двойной NES ломал src картинок портфолио.
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'NES/media'
 
-RECAPTCHA_PUBLIC_KEY = '6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9'
-RECAPTCHA_PRIVATE_KEY = '6LdDOcspAAAAAJPVW3GEKGSgPzU85HiiCEbPFXtz'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
