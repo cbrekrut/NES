@@ -87,3 +87,14 @@ def service_detail(request, service_name):
 
 def thanks(request):
     return render(request, 'thanks.html')
+
+
+def robots_txt(request):
+    from django.http import HttpResponse
+    lines = [
+        "User-agent: *",
+        "Allow: /",
+        "Disallow: /admin/",
+        "Sitemap: https://nes-agency.ru/sitemap.xml",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")

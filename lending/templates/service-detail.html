@@ -1,43 +1,27 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %}{% if service_name == 'landing' %}Разработка лендинга{% elif service_name == 'multilanding' %}Разработка мультилендинга{% elif service_name == 'corpotative' %}Разработка корпоративного сайта{% elif service_name == 'ecom' %}Разработка интернет-магазина{% elif service_name == 'catalog' %}Разработка каталога{% elif service_name == 'redisign' %}Редизайн сайта{% elif service_name == 'CRM' %}Внедрение и автоматизация CRM{% elif service_name == 'adds' %}Контекстная реклама{% elif service_name == 'maintenance' %}Ведение сайта{% elif service_name == 'SEO' %}SEO-оптимизация{% elif service_name == 'hosting' %}Хостинг сайта{% else %}Услуги{% endif %} — NES@Agency{% endblock %}
+{% block meta_description %}Услуга NES@Agency: цены, сроки и этапы работы. Внедрение Битрикс24, корпоративная разработка и автоматизация бизнеса в Твери — от анализа до поддержки.{% endblock %}
 {% block content %}
-<!-- <div class="js-fullheight"> -->
-    <div class="hero-wrap js-fullheight">
-      <div class="overlay"></div>
-      <div id="particles-js"></div>
+    <section class="nes-pagehead">
       <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span style="opacity: 0.7;">Услуга</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                {% if service_name == 'landing' %}
-                Разработка лендинга
-                {% elif service_name == 'multilanding' %}
-                Разработка мультилендинга
-                {% elif service_name == 'corpotative' %}
-                Разработка корпоративного сайта
-                {% elif service_name == 'ecom' %}
-                Разработка интернет-магазина
-                {% elif service_name == 'catalog' %}
-                Разработка каталога
-                {% elif service_name == 'redisign' %}
-                Редизайн сайта
-                {% elif service_name == 'CRM' %}
-                Внедрение и автоматизация CRM системы
-                {% elif service_name == 'adds' %}
-                Контекстная реклама
-                {% elif service_name == 'maintenance' %}
-                Ведение сайта
-                {% elif service_name == 'SEO' %}
-                SEO оптимизация
-                {% elif service_name == 'hosting' %}
-                Хостинг сайта
-                {% endif %}
-            </h1>
-          </div>
-        </div>
+        <span class="nes-kicker">Услуга</span>
+        <h1 class="nes-pagehead__title">
+            {% if service_name == 'landing' %}Разработка лендинга
+            {% elif service_name == 'multilanding' %}Разработка мультилендинга
+            {% elif service_name == 'corpotative' %}Разработка корпоративного сайта
+            {% elif service_name == 'ecom' %}Разработка интернет-магазина
+            {% elif service_name == 'catalog' %}Разработка каталога
+            {% elif service_name == 'redisign' %}Редизайн сайта
+            {% elif service_name == 'CRM' %}Внедрение и автоматизация CRM системы
+            {% elif service_name == 'adds' %}Контекстная реклама
+            {% elif service_name == 'maintenance' %}Ведение сайта
+            {% elif service_name == 'SEO' %}SEO оптимизация
+            {% elif service_name == 'hosting' %}Хостинг сайта
+            {% endif %}
+        </h1>
       </div>
-    </div>
+    </section>
 {% if service_name == 'landing' %}
 <section class="ftco-section">
     <div class="container">

@@ -3,14 +3,25 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="yandex-verification" content="f93a1d5ed48593b6" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
-    <meta name="description" content="NES@Agency - ваш надежный партнер в цифровой трансформации.У нас вы можете заказать сайт, консультацию в сфере ИИ и даже автоматизацию бизнес-процессов">
-    <meta name="keywords" content="NES@Agency, веб-разработка, цифровая трансформация, IT-агентство, создание веб-сайтов, цифровое агентство, заказать сайт, веб-приложения, искусственный интеллект тверь, заказть сайт тверь, купить сайт тверь, заказть сайт">
+    <meta name="yandex-verification" content="f93a1d5ed48593b6" />
 
+    <title>{% block title %}NES@Agency — внедрение Битрикс24 и корпоративная разработка в Твери{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Внедрение Битрикс24 под ключ, корпоративные порталы, автоматизация бизнес-процессов и интеграция с 1С. NES@Agency в Твери — берём задачу целиком, от анализа до поддержки.{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}внедрение битрикс24, битрикс24 тверь, корпоративный портал, автоматизация бизнес-процессов, интеграция с 1с, внедрение crm, разработка корпоративных систем, NES@Agency{% endblock %}">
     <meta name="author" content="NES@Agency">
-    <title>NES@Agency</title>
+    <link rel="canonical" href="https://nes-agency.ru{{ request.path }}">
+    <meta name="robots" content="{% block robots %}index, follow, max-image-preview:large{% endblock %}">
+
+    <!-- Open Graph / Twitter (Twitter использует og:* при отсутствии своих) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NES@Agency">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="{% block og_title %}NES@Agency — Битрикс24 и корпоративная разработка{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Внедрение Битрикс24, корпоративные порталы, автоматизация и интеграция с 1С.{% endblock %}">
+    <meta property="og:url" content="https://nes-agency.ru{{ request.path }}">
+    <meta property="og:image" content="https://nes-agency.ru{% static 'images/nes_logo.jpg' %}">
+    <meta name="twitter:card" content="summary_large_image">
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -23,7 +34,7 @@
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true,
-        webvisor:true
+        webvisor:false
    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/97030639" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -64,6 +75,27 @@
     <!-- Лёгкий рефреш в стиле n3s — грузится последним, переопределяет
          типографику/кнопки/акценты поверх шаблона. -->
     <link rel="stylesheet" href="{% static 'css/nes-refresh.css' %}">
+
+    <!-- Structured data: профиль компании для Яндекса/Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "NES@Agency",
+      "url": "https://nes-agency.ru",
+      "image": "https://nes-agency.ru{% static 'images/nes_logo.jpg' %}",
+      "description": "Внедрение Битрикс24, корпоративные порталы, автоматизация бизнес-процессов и интеграция с 1С.",
+      "telephone": "+7-996-922-53-85",
+      "email": "info@nes-agency.ru",
+      "taxID": "6900020040",
+      "address": { "@type": "PostalAddress", "addressLocality": "Тверь", "addressCountry": "RU" },
+      "areaServed": "RU",
+      "priceRange": "от 40 000 ₽",
+      "sameAs": ["https://t.me/+As9CGvSoJn5mYzRi"],
+      "knowsAbout": ["Битрикс24", "CRM", "корпоративные порталы", "автоматизация бизнес-процессов", "1С"]
+    }
+    </script>
+    {% block extra_jsonld %}{% endblock %}
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -80,7 +112,7 @@
             <li class="nav-item"><a href="{% url 'prices'%}" class="nav-link">Услуги и цены</a></li>
             <li class="nav-item"><a href="{% url 'portfolio'%}" class="nav-link">Портфолио</a></li>
             <li class="nav-item"><a href="{% url 'contact'%}" class="nav-link">Контакты</a></li>
-          <li class="nav-item cta"><a href="" class="nav-link hero-btn" data-toggle="modal" data-target="#myModal"><span>Заказать вебсайт</span></a></li>
+          <li class="nav-item cta"><a href="" class="nav-link hero-btn" data-toggle="modal" data-target="#myModal"><span>Обсудить задачу</span></a></li>
         </ul>
       </div>
     </div>
@@ -91,7 +123,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="myModalLabel">Оформить заказ</h5>
+            <h5 class="modal-title" id="myModalLabel">Расскажите о задаче</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -174,7 +206,7 @@
     
    
      <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#000"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#fff"/></svg></div>
+    <div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#000"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#fff"/></svg></div>
   
   
     <script src="{% static 'js/jquery.min.js' %}"></script>

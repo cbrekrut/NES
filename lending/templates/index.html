@@ -1,179 +1,178 @@
 {% extends "base.html"%}
 {% load static %}
+{% block title %}NES@Agency — внедрение Битрикс24, корпоративные порталы и автоматизация в Твери{% endblock %}
+{% block meta_description %}Внедряем Битрикс24 под ключ, строим корпоративные порталы и автоматизируем бизнес-процессы с интеграцией 1С. Команда NES@Agency — от анализа до поддержки.{% endblock %}
+{% block og_title %}NES@Agency — Битрикс24 и корпоративные решения под ключ{% endblock %}
+{% block og_description %}Внедрение Битрикс24, корпоративные порталы, автоматизация процессов и интеграция с 1С.{% endblock %}
 {% block content %}
 
-<div class="hero-wrap js-fullheight">
-    <div class="overlay"></div>
-    <div id="particles-js"></div>
+<section class="nes-hero">
     <div class="container">
-      <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-        <div class="col-md-6 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
-          <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">NES@Agency</h1>
-          <h1 class="mb-4 fs-4 px-1" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Воплощаем ваши идеи в <strong>цифровую</strong> реальность!</h1>
-          <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-            <a href="" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-outline-white px-5 py-3 hero-btn">Заказать вебсайт</a>
-          </p>
+      <div class="nes-hero__grid">
+        <div class="nes-hero__copy ftco-animate">
+          <span class="nes-kicker">Корпоративная разработка · Битрикс24</span>
+          <h1 class="nes-hero__title">Цифровизируем бизнес <span class="nes-grad-text">под ключ</span></h1>
+          <p class="nes-hero__sub">Не просто сайты. Корпоративные системы, внедрение Битрикс24, автоматизация процессов и интеграция с 1С. Берём задачу целиком — от анализа до поддержки.</p>
+          <div class="nes-hero__cta">
+            <a href="" data-toggle="modal" data-target="#myModal" class="nes-btn nes-btn--primary">Обсудить задачу</a>
+            <a href="{% url 'prices' %}" class="nes-btn nes-btn--ghost">Услуги и цены</a>
+          </div>
+          <div class="nes-hero__trust">
+            <span><strong>8 лет</strong> в разработке</span>
+            <span><strong>Битрикс24</strong> под ключ</span>
+            <span><strong>1С</strong> интеграции</span>
+          </div>
+        </div>
+        <div class="nes-hero__visual" aria-hidden="true">
+          <div class="nes-board">
+            <div class="nes-board__bar"><i></i><i></i><i></i><b>Битрикс24 · Воронка продаж</b></div>
+            <div class="nes-board__cols">
+              <div class="nes-board__col">
+                <div class="nes-board__h">Лид</div>
+                <div class="nes-board__card"></div>
+                <div class="nes-board__card"></div>
+                <div class="nes-board__card"></div>
+              </div>
+              <div class="nes-board__col">
+                <div class="nes-board__h">В работе</div>
+                <div class="nes-board__card is-accent"></div>
+                <div class="nes-board__card"></div>
+              </div>
+              <div class="nes-board__col">
+                <div class="nes-board__h">Сделка</div>
+                <div class="nes-board__card"></div>
+                <div class="nes-board__card"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="nes-stats">
+    <div class="container">
+      <div><div class="nes-stat__num">8</div><div class="nes-stat__label">лет в разработке</div></div>
+      <div><div class="nes-stat__num">50<span class="nes-grad-text">+</span></div><div class="nes-stat__label">проектов сдано</div></div>
+      <div><div class="nes-stat__num">30<span class="nes-grad-text">+</span></div><div class="nes-stat__label">внедрений Битрикс24</div></div>
+      <div><div class="nes-stat__num">10<span class="nes-grad-text">+</span></div><div class="nes-stat__label">интеграций с 1С</div></div>
+    </div>
+  </section>
   <!-- END  -->
   <section class="ftco-section">
     <div class="container">
-      <!-- <div class="row justify-content-center mb-5 pb-5">
-        <div class="col-md-6 text-center heading-section ftco-animate">
-          <span class="subheading">Наши услуги</span>
-          <h2 class="mb-4">Процесс разработки</h2>
-          <p>Мы предлагаем решения в сфере цифровизации бизнеса и полного сопровождения в сфере IT-Технологий</p>
+      <div class="row justify-content-center mb-5 pb-2">
+        <div class="col-md-8 text-center heading-section ftco-animate">
+          <span class="subheading">Что мы делаем</span>
+          <h2 class="mb-3">Решаем задачи бизнеса, а не просто рисуем сайты</h2>
+          <p>Команда инженеров и внедренцев. Берём процесс целиком — от анализа до поддержки.</p>
         </div>
-      </div> -->
+      </div>
       <div class="row pt-2">
-        <div class="col-md-4 d-flex align-self-stretch ftco-animate mb-5 mb-md-0">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate mb-4 mb-md-0">
           <div class="media block-6 services d-block text-center" style="margin-bottom:0;">
-            <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-2"><span class="align-self-center fa-solid fa-money-bill-trend-up"></span></div></div>
+            <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-2"><span class="align-self-center fa-solid fa-diagram-project"></span></div></div>
             <div class="media-body p-2 mt-3">
-              <h3 class="heading">Увеличение продаж</h3>
-              <p>Стильный и красивый дизайн с интересным контентом увеличивает продажи компании через интернет в разы</p>
+              <h3 class="heading">Внедрение Битрикс24</h3>
+              <p>CRM, воронки продаж, телефония, бизнес-процессы и роботы. Настраиваем под ваш реальный процесс, а не под коробку.</p>
             </div>
-          </div>      
+          </div>
         </div>
 
-        <div class="col-md-4 d-flex align-self-stretch ftco-animate mb-5 mb-md-0">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate mb-4 mb-md-0">
           <div class="media block-6 services d-block text-center" style="margin-bottom:0;">
-            <div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-2"><span class="align-self-center fa-solid fa-angles-up"></span></div></div>
+            <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-2"><span class="align-self-center fa-solid fa-sitemap"></span></div></div>
             <div class="media-body p-2 mt-3">
-              <h3 class="heading">Повышение имиджа</h3>
-              <p>Фирменный стиль и современный дизайн отразят высокий уровень вашей компании</strong></p>
+              <h3 class="heading">Корпоративные системы</h3>
+              <p>Учёт, склад, заказы, внутренние порталы и личные кабинеты. Платформы, которые растут вместе с компанией.</p>
             </div>
-          </div>    
+          </div>
         </div>
 
-        <div class="col-md-4 d-flex align-self-stretch ftco-animate mb-5 mb-md-0">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate mb-4 mb-md-0">
           <div class="media block-6 services d-block text-center" style="margin-bottom:0;">
-            <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-2"><span class="align-self-center fa-solid fa-face-smile-beam"></span></div></div>
+            <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-2"><span class="align-self-center fa-solid fa-gears"></span></div></div>
             <div class="media-body p-2 mt-3">
-              <h3 class="heading">Простота взаимодействия</h3>
-              <p>Создание продуманного интерфейса и мобильной версии обеспечат максимальный комфорт пользователю</p>
+              <h3 class="heading">Автоматизация и 1С</h3>
+              <p>Двусторонняя интеграция с 1С, синхронизация данных без двойного ввода, автоматизация рутины и отчётности.</p>
             </div>
-          </div>      
+          </div>
         </div>
       </div>
     </div>
   </section>
     <!-- END  -->
     
-    <!-- портфолио-->
-      <div class="bg-light">
-      <section class="ftco-section-featured mt-3">
-        <div class="container-fluid" data-scrollax-parent="true">
-          <div class="row no-gutters d-flex align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-            <div class="col-md-3 mb-3 ftco-animate">
-              <a href="https://euroservice69.ru/" target="_blank" class="featured-img">
-                <div class="text-1 p-4 d-flex align-items-center">
-                  <h3>Евро Сервис<br><span class="tag text-center">Корпоративный вебсайт</span></h3>
-                </div>
-                <img src="{% static 'images/evroservice.png' %}" class="img-fluid" alt="">
-                <div class="text p-4 d-flex align-items-center">
-                  <div class="user d-flex align-items-center">
-                    <h3 class="fs-4 fw-light">130,000₽</h3>
-                  </div>
-                </div>
-              </a>
-            </div>
-            {% comment %} tsg {% endcomment %}
-            <div class="col-md-6 ">
-              <div class="row no-gutters">
-                <div class="col-md-12">
-                  <div class="row no-gutters d-flex align-items-end">
-
-                    <div class="col-md-8 ftco-animate"> 
-                      <a href="https://www.tsgflorida.com/" target="_blank" class="featured-img">
-                        <div class="text-1 p-4 d-flex align-items-center">
-                          <h3>Trans Service Group<br><span class="tag">Интернет-магазин</span></h3>
-                        </div>
-                        <img src="{% static 'images/tsg.png' %}" class="img-fluid" alt="">
-                        <div class="text p-4 d-flex align-items-center">
-                          <div class="user d-flex align-items-center">
-                            <h3 class="fs-4 fw-light">2,200$</h3>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-
-                    <div class="col-md-4 ftco-animate">
-                      <a href="https://gduozera.ru/" class="featured-img" target="_blank">
-                        <div class="text-1 p-4 d-flex align-items-center">
-                          <h3>Гостевой дом "У озера"<br><span class="tag">Корпоративный вебсайт</span></h3>
-                        </div>
-                        <img src="{% static 'images/gduozera.png' %}" class="img-fluid" alt="">
-                        <div class="text p-4 d-flex align-items-center">
-                          <div class="user d-flex align-items-center">
-                            <h3 class="fs-4 fw-light">120,000₽</h3>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12 mt-0 mt-md-5 pt-0 pt-md-5">
-                  <div class="row no-gutters d-flex align-items-start">
-                    <div class="col-md-12 ftco-animate">
-                      <a href="https://ксенон69.рф/" class="featured-img" target="_blank">
-                        <div class="text-1 p-4 d-flex align-items-center">
-                          <h3>Ксенон Сервис<br><span class="tag">Корпоративный сайт</span></h3>
-                        </div>
-                        <img src="{% static 'images/xenon.png' %}" class="img-fluid" alt="" style="height:100%; width:100%; object-fit:cover;">
-                        <div class="text p-4 d-flex align-items-center">
-                          <div class="user d-flex align-items-center">
-                            <h3 class="fs-4 fw-light">180,000₽</h3>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 ftco-animate">
-              <a href="https://bbsport.ru/" class="featured-img" target="_blank">
-                <div class="text-1 p-4 d-flex align-items-center">
-                  <h3>ООО "Биом"<br><span class="tag">Лендинг</span></h3>
-                </div>
-                <img src="{% static 'images/biom.png' %}" class="img-fluid" alt="">
-                <div class="text p-4 d-flex align-items-center">
-                  <div class="user d-flex align-items-center">
-                    <h3 class="fs-4 fw-light">50,000₽</h3>
-                  </div>
-                </div>
-              </a>
-            </div>
+    <!-- РАБОТЫ -->
+    <section class="ftco-section bg-light nes-works">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <span class="subheading">Работы</span>
+            <h2 class="mb-3">Проекты, которые мы сделали</h2>
+            <p>Корпоративные сайты, интернет-магазины и внедрения — от запуска до поддержки.</p>
           </div>
         </div>
-      </section>
+        <div class="nes-works__grid">
+          <a href="https://ксенон69.рф/" target="_blank" rel="noopener" class="nes-work ftco-animate">
+            <div class="nes-work__img"><img src="{% static 'images/xenon.png' %}" alt="Ксенон Сервис"></div>
+            <div class="nes-work__meta">
+              <div><span class="nes-work__name">Ксенон Сервис</span><span class="nes-work__tag">Корпоративный сайт</span></div>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+          <a href="https://www.tsgflorida.com/" target="_blank" rel="noopener" class="nes-work ftco-animate">
+            <div class="nes-work__img"><img src="{% static 'images/tsg.png' %}" alt="Trans Service Group"></div>
+            <div class="nes-work__meta">
+              <div><span class="nes-work__name">Trans Service Group</span><span class="nes-work__tag">Интернет-магазин</span></div>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+          <a href="https://euroservice69.ru/" target="_blank" rel="noopener" class="nes-work ftco-animate">
+            <div class="nes-work__img"><img src="{% static 'images/evroservice.png' %}" alt="Евро Сервис"></div>
+            <div class="nes-work__meta">
+              <div><span class="nes-work__name">Евро Сервис</span><span class="nes-work__tag">Корпоративный сайт</span></div>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+          <a href="https://gduozera.ru/" target="_blank" rel="noopener" class="nes-work ftco-animate">
+            <div class="nes-work__img"><img src="{% static 'images/gduozera.png' %}" alt="Гостевой дом У озера"></div>
+            <div class="nes-work__meta">
+              <div><span class="nes-work__name">Гостевой дом «У озера»</span><span class="nes-work__tag">Корпоративный сайт</span></div>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+          <a href="https://bbsport.ru/" target="_blank" rel="noopener" class="nes-work ftco-animate">
+            <div class="nes-work__img"><img src="{% static 'images/biom.png' %}" alt="Биом"></div>
+            <div class="nes-work__meta">
+              <div><span class="nes-work__name">ООО «Биом»</span><span class="nes-work__tag">Лендинг</span></div>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        </div>
+        <div class="text-center mt-5">
+          <a href="{% url 'portfolio' %}" class="nes-btn nes-btn--ghost">Все работы</a>
+        </div>
       </div>
+    </section>
 
 <!-- ТАРИФЫ -->
 <section class="ftco-section d-flex justify-content-center" id="prices">
   <div class="container prices-container mb-5 pb-5" style="margin:0;width: 100vw; max-width: 100vw; padding: 0 5vw;">
-    <div class="row no-gutters justify-content-center mb-md-5 pb-5"> 
-      <div class="col-md-7 text-center heading-section ftco-animate">
-        <h2 class="mb-4">Наши тарифы</h2>
+    <div class="row no-gutters justify-content-center mb-5 pb-2">
+      <div class="col-md-8 text-center heading-section ftco-animate">
+        <span class="subheading">Услуги и цены</span>
+        <h2 class="mb-3">Битрикс24 и корпоративные решения</h2>
+        <p>Внедрение, порталы и автоматизация — наша основа. Сайты делаем, когда они часть задачи.</p>
       </div>
     </div>
     <div class="row prices">
       <div class="col-md-6 col-lg-4 col-12 mb-3 ftco-animate" >
         <div class="card mr-md-1" style="border:none; height: 100%;">
           <div class="card-body bg-light" id="card1">
-            <h5 class="card-title">
-              <span class="fs-2 fw-bold" style="
-                  background: linear-gradient(to right, #8fceff, #2072ff, #1322c1);
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  color: transparent;
-              ">Лендинг</span>
-            </h5>
-            <p class="card-text">от <span class="fs-5">40.000₽</span></p>
-            <p class="card-text">Максимальные конверсии по заявкам и звонкам</p>
+            <h5 class="card-title">Внедрение Битрикс24</h5>
+            <p class="card-text mb-2">от <span style="color:#FF6B1A;font-weight:800;font-size:1.3rem">2 000 ₽/час</span></p>
+            <p class="card-text">CRM, воронки продаж, телефония, бизнес-процессы и роботы. Настраиваем под ваш процесс и обучаем команду.</p>
             <a href="{% url "prices" %}" class="btn btn-prices-first btn-lg">Подробнее</a>
           </div>
         </div>
@@ -181,16 +180,9 @@
       <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate" >
         <div class="card mr-md-1 d-flex flex-column justify-content-between" style="border:none; height: 100%;">
           <div class="card-body bg-light" id="card2">
-            <h5 class="card-title">
-              <span class="fs-2 fw-bold" style="
-                  background: linear-gradient(to right, #86ef8b, #73e1e3, #60a7d6);
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  color: transparent;
-              ">Мультилендинг</span>
-            </h5>
-            <p class="card-text">от <span class="fs-5">60.000₽</span></p>
-            <p class="card-text">Подстраивается под запросы клиента</p>
+            <h5 class="card-title">Корпоративный портал</h5>
+            <p class="card-text mb-2">от <span style="color:#FF6B1A;font-weight:800;font-size:1.3rem">150 000 ₽</span></p>
+            <p class="card-text">Внутренний портал на Битрикс24: задачи, проекты, документы, оргструктура и база знаний компании.</p>
             <a href="{% url "prices" %}" class="btn btn-prices-second btn-lg">Подробнее</a>
           </div>
         </div>
@@ -198,68 +190,20 @@
       <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate" >
         <div class="card mr-md-1 d-flex flex-column justify-content-between" style="border:none; height: 100%;">
           <div class="card-body bg-light" id="card3">
-            <h5 class="card-title">
-              <span class="fs-2 fw-bold" style="
-                  background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  color: transparent;
-              ">Корпоративный сайт</span>
-            </h5>
-            <p class="card-text">от <span class="fs-5">130.000₽</span></p>
-            <p class="card-text">Закрепите репутацию вашей компании в интернете.</p>
+            <h5 class="card-title">Автоматизация и 1С</h5>
+            <p class="card-text mb-2">от <span style="color:#FF6B1A;font-weight:800;font-size:1.3rem">60 000 ₽</span></p>
+            <p class="card-text">Интеграция с 1С, синхронизация данных без двойного ввода, роботы и автоматическая отчётность.</p>
             <a href="{% url "prices" %}" class="btn btn-prices-third btn-lg">Подробнее</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate">
-        <div class="card" style="border:none; height: 100%;">
-          <div class="card-body bg-light" id="card4">
-            <h5 class="card-title">
-              <span class="fs-2 fw-bold" style="
-                  background: linear-gradient(to right, #e53acc, #c829e4, #7a29e4);
-                  -webkit-background-clip: text;
-                  background-clip: text;
-                  color: transparent;
-              ">Интернет-магазин</span>
-            </h5>
-            <p class="card-text">от <span class="fs-5">170.000₽</span></p>
-            <p class="card-text">Сайт для онлайн продаж</p>
-            <a href="{% url "prices" %}" class="btn btn-prices-fourth btn-lg">Подробнее</a>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate">
         <div class="card" style="border:none; height: 100%;">
           <div class="card-body bg-light" id="card5">
-            <h5 class="card-title">
-              <span class="fs-2 fw-bold" style="
-              background: linear-gradient(to right, hsl(36, 100%, 61%), hsl(14, 100%, 61%), hsl(0, 100%, 61%));
-              -webkit-background-clip: text;
-              background-clip: text;
-              color: transparent;
-          ">Автоматизация бизнес-процессов</span>
-            </h5>
-            <p class="card-text">от <span class="fs-5">60.000₽</span></p>
-            <p class="card-text">Автоматизация бизнес-процессов от специалистов</p>
+            <h5 class="card-title">Интернет-магазин</h5>
+            <p class="card-text mb-2">от <span style="color:#FF6B1A;font-weight:800;font-size:1.3rem">170 000 ₽</span></p>
+            <p class="card-text">Каталог, корзина, онлайн-оплата и интеграции для продаж в сети.</p>
             <a href="{% url "prices" %}" class="btn btn-prices-third btn-lg">Подробнее</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate">
-        <div class="card" style="border:none; height: 100%;">
-          <div class="card-body bg-light" id="card6">
-            <h5 class="card-title">
-              <span class="fs-2 fw-bold" style="
-              background: linear-gradient(to right, #8fceff, #2072ff, #1322c1);
-              -webkit-background-clip: text;
-              background-clip: text;
-              color: transparent;
-          ">Внедрение CRM</span>
-            </h5>
-            <p class="card-text">от <span class="fs-5">2.000₽/час</span></p>
-            <p class="card-text">Качественное внедрение CRM системы.</p>
-            <a href="{% url "prices" %}" class="btn btn-prices-first btn-lg">Подробнее</a>
           </div>
         </div>
       </div>
