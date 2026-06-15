@@ -239,10 +239,133 @@ a.nes-contact-card:hover { border-color:var(--nes-accent); transform:translateY(
 /* ───────── Прайс block-11 (страница услуг) — флэт вместо радужных градиентов ───────── */
 .block-11 { background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:2rem 1.6rem; height:100%; transition:transform .18s ease, border-color .18s ease; }
 .block-11:hover { transform:translateY(-4px); border-color:var(--nes-accent); }
-.block-11 .excerpt[style] { background:none !important; -webkit-text-fill-color:var(--nes-ink) !important; color:var(--nes-ink) !important; font-weight:800; }
-.block-11 .price .number[style] { background:none !important; -webkit-text-fill-color:var(--nes-accent) !important; color:var(--nes-accent) !important; }
-.block-11 .price { font-weight:800; font-size:1.7rem; color:var(--nes-accent); display:block; margin:.4rem 0 1rem; }
+.block-11 .excerpt { background:none !important; -webkit-text-fill-color:var(--nes-ink) !important; color:var(--nes-ink) !important; font-weight:800; font-size:1.4rem; }
+.block-11 .excerpt.fs-5 { color:var(--nes-muted) !important; -webkit-text-fill-color:var(--nes-muted) !important; font-weight:500; font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.8rem !important; letter-spacing:.02em; }
+.block-11 .number { background:none !important; -webkit-text-fill-color:var(--nes-accent) !important; color:var(--nes-accent) !important; }
+.block-11 .price { font-weight:800; font-size:1.7rem; color:var(--nes-accent); display:block; margin:.5rem 0 1.2rem; }
+.block-11 .price sup { color:var(--nes-muted); font-size:.9rem; -webkit-text-fill-color:var(--nes-muted); }
 .block-11 .pricing-text { color:var(--nes-ink-soft); }
+/* Доп. услуги block-7 (если останутся) */
+.block-7 { background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:1.8rem 1.4rem; height:100%; transition:transform .18s ease, border-color .18s ease; }
+.block-7:hover { transform:translateY(-4px); border-color:var(--nes-accent); }
+.block-7 .price { color:var(--nes-accent); font-weight:800; }
 
 /* ───────── Портфолио — деталь ───────── */
 .block-3 .text .subheading { color:var(--nes-accent) !important; font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; background:none; border:none; padding:0; }
+
+/* ═════════════════════════════════════════════════════════════
+   Контактные виджеты: FAB-трубка (ПК), нижняя панель (моб.),
+   поповер с контактами и приглашение (15 сек / exit-intent)
+   ═════════════════════════════════════════════════════════════ */
+
+/* — Плавающая кнопка-трубка (десктоп, правый нижний угол) — */
+.nes-fab{
+  position:fixed; right:24px; bottom:24px; z-index:1080;
+  width:60px; height:60px; border:none; border-radius:50%;
+  background:var(--nes-accent); color:#fff; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 26px rgba(255,107,26,.42);
+  transition:transform .18s ease, background .18s ease;
+}
+.nes-fab:hover{ background:var(--nes-accent-d); transform:translateY(-2px) scale(1.04); }
+.nes-fab svg{ width:26px; height:26px; fill:#fff; }
+.nes-fab::after{ /* пульс */
+  content:""; position:absolute; inset:0; border-radius:50%;
+  box-shadow:0 0 0 0 rgba(255,107,26,.55); animation:nesPulse 2.4s infinite;
+}
+@keyframes nesPulse{ 70%{ box-shadow:0 0 0 16px rgba(255,107,26,0); } 100%{ box-shadow:0 0 0 0 rgba(255,107,26,0); } }
+
+/* — Поповер с контактами над FAB — */
+.nes-pop{
+  position:fixed; right:24px; bottom:96px; z-index:1081;
+  width:300px; max-width:calc(100vw - 32px);
+  background:var(--nes-card); border:1px solid var(--nes-line);
+  border-radius:var(--nes-r); padding:1.4rem 1.4rem 1.5rem;
+  box-shadow:0 18px 50px rgba(31,24,18,.18);
+  transform:translateY(12px) scale(.98); opacity:0; pointer-events:none;
+  transition:transform .2s ease, opacity .2s ease;
+}
+.nes-pop.is-open{ transform:translateY(0) scale(1); opacity:1; pointer-events:auto; }
+.nes-pop__close{
+  position:absolute; top:8px; right:12px; border:none; background:none;
+  font-size:1.5rem; line-height:1; color:var(--nes-muted); cursor:pointer;
+}
+.nes-pop__close:hover{ color:var(--nes-ink); }
+.nes-pop__kicker{ font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; color:var(--nes-accent); margin:0 0 .35rem; }
+.nes-pop__title{ font-weight:800; font-size:1.15rem; color:var(--nes-ink); margin:0 0 .3rem; }
+.nes-pop__sub{ font-size:.85rem; color:var(--nes-muted); margin:0 0 1rem; line-height:1.4; }
+.nes-pop__phone{ display:block; font-weight:800; font-size:1.45rem; color:var(--nes-ink); text-decoration:none; margin-bottom:1rem; }
+.nes-pop__phone:hover{ color:var(--nes-accent); }
+.nes-pop__actions{ display:grid; grid-template-columns:1fr 1fr; gap:.6rem; }
+.nes-pop__btn{
+  display:flex; align-items:center; justify-content:center; gap:.4rem;
+  padding:.7rem .6rem; border-radius:999px; font-weight:700; font-size:.9rem;
+  text-decoration:none; transition:transform .15s ease, background .15s ease;
+}
+.nes-pop__btn:hover{ transform:translateY(-2px); }
+.nes-pop__btn--call{ background:var(--nes-accent); color:#fff; }
+.nes-pop__btn--call:hover{ background:var(--nes-accent-d); color:#fff; }
+.nes-pop__btn--tg{ background:#229ed9; color:#fff; }
+.nes-pop__btn--tg:hover{ background:#1c87ba; color:#fff; }
+
+/* — Нижняя липкая панель (мобайл) — */
+.nes-bar{
+  position:fixed; left:0; right:0; bottom:0; z-index:1080;
+  display:none; gap:.5rem; padding:.55rem .7rem;
+  background:rgba(255,255,255,.96); backdrop-filter:blur(8px);
+  border-top:1px solid var(--nes-line);
+  box-shadow:0 -6px 20px rgba(31,24,18,.08);
+}
+.nes-bar__btn{
+  flex:1; display:flex; align-items:center; justify-content:center; gap:.4rem;
+  padding:.85rem .5rem; border-radius:999px; font-weight:700; font-size:.95rem;
+  text-decoration:none; transition:background .15s ease;
+}
+.nes-bar__btn--call{ background:var(--nes-accent); color:#fff; }
+.nes-bar__btn--tg{ background:#229ed9; color:#fff; }
+
+/* — Приглашение по таймеру / выходу (центрированный оверлей) — */
+.nes-invite{
+  position:fixed; inset:0; z-index:1090;
+  display:flex; align-items:center; justify-content:center; padding:18px;
+  background:rgba(31,24,18,.55); opacity:0; pointer-events:none;
+  transition:opacity .25s ease;
+}
+.nes-invite.is-open{ opacity:1; pointer-events:auto; }
+.nes-invite__card{
+  position:relative; width:420px; max-width:100%;
+  background:var(--nes-card); border:1px solid var(--nes-line);
+  border-radius:var(--nes-r); padding:2.2rem 2rem 2rem; text-align:center;
+  box-shadow:0 30px 70px rgba(31,24,18,.3);
+  transform:translateY(16px) scale(.97); transition:transform .25s ease;
+}
+.nes-invite.is-open .nes-invite__card{ transform:translateY(0) scale(1); }
+.nes-invite__close{
+  position:absolute; top:10px; right:16px; border:none; background:none;
+  font-size:1.7rem; line-height:1; color:var(--nes-muted); cursor:pointer;
+}
+.nes-invite__close:hover{ color:var(--nes-ink); }
+.nes-invite__kicker{ font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; color:var(--nes-accent); margin:0 0 .5rem; }
+.nes-invite__title{ font-weight:800; font-size:1.5rem; color:var(--nes-ink); margin:0 0 .5rem; line-height:1.2; }
+.nes-invite__sub{ font-size:.95rem; color:var(--nes-muted); margin:0 0 1.3rem; line-height:1.5; }
+.nes-invite__phone{ display:inline-block; font-weight:800; font-size:1.8rem; color:var(--nes-ink); text-decoration:none; margin-bottom:1.3rem; }
+.nes-invite__phone:hover{ color:var(--nes-accent); }
+.nes-invite__actions{ display:flex; gap:.7rem; }
+.nes-invite__btn{
+  flex:1; display:flex; align-items:center; justify-content:center; gap:.4rem;
+  padding:.85rem .6rem; border-radius:999px; font-weight:700; font-size:.95rem;
+  text-decoration:none; transition:transform .15s ease, background .15s ease;
+}
+.nes-invite__btn:hover{ transform:translateY(-2px); }
+.nes-invite__btn--call{ background:var(--nes-accent); color:#fff; }
+.nes-invite__btn--call:hover{ background:var(--nes-accent-d); color:#fff; }
+.nes-invite__btn--tg{ background:#229ed9; color:#fff; }
+.nes-invite__btn--tg:hover{ background:#1c87ba; color:#fff; }
+
+/* — Адаптив: на мобиле прячем FAB+поповер, показываем панель — */
+@media (max-width:767.98px){
+  .nes-fab, .nes-pop{ display:none !important; }
+  .nes-bar{ display:flex; }
+  /* чтобы панель не перекрывала футер */
+  .ftco-footer{ margin-bottom:64px; }
+}
