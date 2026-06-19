@@ -1,20 +1,19 @@
 
 {% extends "base.html"%}
 {% load static %}
+{% block title %}Портфолио — проекты и внедрения NES@Agency{% endblock %}
+{% block meta_description %}Наши работы: корпоративные сайты, интернет-магазины и внедрения Битрикс24. Реальные проекты NES@Agency — от запуска до поддержки.{% endblock %}
+{% block og_title %}Портфолио NES@Agency{% endblock %}
+{% block og_description %}Проекты и внедрения: корпоративные сайты, магазины, Битрикс24.{% endblock %}
 {% block content %}
     {% if projects %}
-    <div class="hero-wrap js-fullheight">
-      <div class="overlay"></div>
-      <div id="particles-js"></div>
+    <section class="nes-pagehead">
       <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span>Наши работы</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Портфолио</h1>
-          </div>
-        </div>
+        <span class="nes-kicker">Портфолио</span>
+        <h1 class="nes-pagehead__title">Проекты, которые мы сделали</h1>
+        <p class="nes-pagehead__sub">Корпоративные сайты, интернет-магазины и внедрения — от запуска до поддержки.</p>
       </div>
-    </div>
+    </section>
   
     <section class="ftco-section bg-light">
       <div class="container">
@@ -37,18 +36,12 @@
       </div>
     </section>
     {% else %}
-    <div class="hero-wrap js-fullheight">
-      <div class="overlay"></div>
-      <div id="particles-js"></div>
+    <section class="nes-pagehead">
       <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span>Представляем вам</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{project.title}} {{project.name}}</h1>
-          </div>
-        </div>
+        <span class="nes-kicker">Кейс</span>
+        <h1 class="nes-pagehead__title">{{project.title}} {{project.name}}</h1>
       </div>
-    </div>
+    </section>
     
     <section class="ftco-section">
       <div class="container">

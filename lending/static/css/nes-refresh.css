@@ -1,0 +1,411 @@
+/*
+ * nes-refresh.css — редизайн NES@Agency v3 (de-AI pass).
+ *
+ * Концепция та же: светлое тёплое, корпоративная разработка + Битрикс24,
+ * экспертность, легче чем n3s. Но убран «иишный» налёт:
+ *   - плоский уверенный оранжевый вместо градиентов повсюду
+ *   - меньше мягких теней, больше хайрлайн-границ и структуры
+ *   - hero-визуал = плоская мини-доска Битрикс24, а не блоб с плавашками
+ *   - блок работ = чистая редакторская сетка, без оверлеев и ценников
+ *
+ * Семейная нить с n3s: оранжевый #FF6B1A, Inter, моно-лейблы.
+ */
+
+:root {
+  --nes-accent: #FF6B1A;
+  --nes-accent-d: #e85d12;        /* hover */
+  --nes-accent-soft: rgba(255,107,26,.10);
+  --nes-canvas: #faf7f2;
+  --nes-canvas-2: #f4efe7;
+  --nes-card: #ffffff;
+  --nes-ink: #1f1812;
+  --nes-ink-soft: #4a4138;
+  --nes-muted: #8a8073;
+  --nes-line: #e7ddcf;
+  --nes-line-2: #d8cdbb;
+  --nes-shadow: 0 10px 30px rgba(46,32,18,.06);
+  --nes-r: 18px;
+  --nes-r-sm: 12px;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+  background: var(--nes-canvas) !important;
+  color: var(--nes-ink) !important;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+::selection { background: var(--nes-accent); color:#fff; }
+
+h1,h2,h3,h4,h5,.heading,.ftco-heading-2,.heading-section h2,.card-title {
+  font-family: "Inter", system-ui, sans-serif !important;
+  letter-spacing:-.025em; color: var(--nes-ink); font-weight: 800 !important;
+}
+p { opacity:.92; }
+
+.nes-kicker, .subheading {
+  display:inline-block; font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  text-transform:uppercase; letter-spacing:.18em; font-size:.7rem; font-weight:600;
+  color: var(--nes-accent) !important; padding:6px 13px;
+  border:1px solid var(--nes-line-2); border-radius:8px; background: var(--nes-card);
+  margin-bottom:1.2rem;
+}
+.nes-grad-text { color: var(--nes-accent); }
+
+/* ───────── Навбар ───────── */
+.navbar.ftco_navbar, #ftco-navbar {
+  background: rgba(250,247,242,.86) !important;
+  backdrop-filter: saturate(150%) blur(12px); -webkit-backdrop-filter: saturate(150%) blur(12px);
+  border-bottom:1px solid var(--nes-line);
+}
+.navbar-brand { font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-weight:700; font-size:1.25rem; color:var(--nes-ink)!important; }
+.navbar .nav-link { color:var(--nes-ink)!important; opacity:.78; font-weight:500; }
+.navbar .nav-link:hover { opacity:1; color:var(--nes-accent)!important; }
+.navbar .oi-menu, .navbar .navbar-toggler { color:var(--nes-ink)!important; }
+.nav-item.cta .hero-btn { background: var(--nes-accent)!important; border-radius:10px!important; padding:.55rem 1.4rem!important; box-shadow:none; }
+.nav-item.cta .hero-btn span { color:#fff!important; font-weight:600; }
+
+/* ───────── Кнопки: плоские ───────── */
+.btn, .nes-btn {
+  border-radius:10px !important; font-weight:600 !important; border:none !important; letter-spacing:.01em;
+  transition: transform .14s ease, background-color .14s ease, border-color .14s ease !important;
+}
+.btn-primary,.prices-btn,.hero-btn,.btn-prices-first,.btn-prices-second,.btn-prices-third,
+.btn-prices-fourth,.btn.btn-primary,input[type=submit].btn,.nes-btn--primary {
+  background: var(--nes-accent) !important; color:#fff !important; box-shadow:none;
+}
+.btn-primary:hover,.prices-btn:hover,.hero-btn:hover,.btn-prices-first:hover,.btn-prices-second:hover,
+.btn-prices-third:hover,.btn-prices-fourth:hover,.btn.btn-primary:hover,input[type=submit].btn:hover,.nes-btn--primary:hover {
+  background: var(--nes-accent-d) !important; color:#fff !important; transform: translateY(-2px);
+}
+.nes-btn--ghost,.btn-outline-white {
+  display:inline-flex; align-items:center; gap:.5rem;
+  background: var(--nes-card)!important; border:1px solid var(--nes-line-2)!important; color:var(--nes-ink)!important;
+  padding:.8rem 1.5rem; box-shadow:none;
+}
+.nes-btn--ghost:hover,.btn-outline-white:hover { border-color:var(--nes-accent)!important; color:var(--nes-accent)!important; }
+@media (prefers-reduced-motion:reduce){ .btn,.nes-btn{transition:none!important} .btn:hover,.nes-btn:hover{transform:none!important} }
+
+/* ───────── HERO ───────── */
+.nes-hero { position:relative; overflow:hidden; padding:9rem 0 5rem;
+  background:
+    radial-gradient(48% 60% at 92% 8%, rgba(255,107,26,.08) 0%, transparent 60%),
+    var(--nes-canvas);
+  border-bottom:1px solid var(--nes-line);
+}
+.nes-hero__grid { display:grid; grid-template-columns:1.05fr .95fr; gap:3.5rem; align-items:center; }
+.nes-hero__title { font-size:clamp(2.6rem,5.2vw,4.4rem)!important; line-height:1.05!important; font-weight:800!important; letter-spacing:-.035em; margin:.3rem 0 1.3rem; }
+.nes-hero__sub { font-size:clamp(1.02rem,1.4vw,1.18rem); color:var(--nes-ink-soft); max-width:34ch; line-height:1.65; }
+.nes-hero__cta { display:flex; flex-wrap:wrap; gap:.9rem; margin:1.8rem 0 1.6rem; }
+.nes-hero__cta .nes-btn--primary { padding:.9rem 1.8rem; font-size:1.02rem; }
+.nes-hero__trust { display:flex; flex-wrap:wrap; gap:1.3rem; color:var(--nes-muted); font-size:.9rem; }
+.nes-hero__trust strong { color:var(--nes-ink); font-weight:700; }
+.nes-hero__trust span { display:flex; align-items:center; gap:.45rem; }
+.nes-hero__trust span::before { content:""; width:7px; height:7px; border-radius:2px; background:var(--nes-accent); }
+
+/* Hero визуал — плоская мини-доска Битрикс24 */
+.nes-hero__visual { position:relative; }
+.nes-board { background:var(--nes-card); border:1px solid var(--nes-line-2); border-radius:var(--nes-r); box-shadow:var(--nes-shadow); overflow:hidden; }
+.nes-board__bar { display:flex; align-items:center; gap:6px; padding:13px 16px; border-bottom:1px solid var(--nes-line);
+  font-family:"JetBrains Mono",monospace; font-size:.74rem; color:var(--nes-muted); }
+.nes-board__bar b { color:var(--nes-ink); font-weight:600; margin-left:6px; }
+.nes-board__bar i { width:9px; height:9px; border-radius:50%; background:var(--nes-line-2); display:inline-block; }
+.nes-board__bar i:first-child { background:var(--nes-accent); }
+.nes-board__cols { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; padding:16px; }
+.nes-board__h { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--nes-muted); margin-bottom:10px; }
+.nes-board__card { height:34px; border-radius:8px; background:var(--nes-canvas-2); border:1px solid var(--nes-line); margin-bottom:8px; position:relative; }
+.nes-board__card::before { content:""; position:absolute; left:9px; top:9px; width:46%; height:6px; border-radius:3px; background:var(--nes-line-2); }
+.nes-board__card::after { content:""; position:absolute; left:9px; top:20px; width:28%; height:5px; border-radius:3px; background:var(--nes-line); }
+.nes-board__card.is-accent { border-color:var(--nes-accent); background:var(--nes-accent-soft); }
+.nes-board__card.is-accent::before { background:var(--nes-accent); }
+
+@media (max-width:768px){
+  .nes-hero{padding:7rem 0 3rem}
+  .nes-hero__grid{grid-template-columns:1fr; gap:2.5rem}
+  .nes-hero__sub{max-width:none}
+}
+
+/* ───────── Статистика ───────── */
+.nes-stats { background:var(--nes-ink); color:#fff; }
+.nes-stats .container { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; padding:2.4rem 15px; }
+.nes-stat__num { font-size:clamp(1.9rem,3vw,2.7rem); font-weight:800; letter-spacing:-.03em; }
+.nes-stat__num .nes-grad-text { color:var(--nes-accent); }
+.nes-stat__label { color:rgba(255,255,255,.62); font-size:.9rem; margin-top:.2rem; }
+@media (max-width:768px){ .nes-stats .container{grid-template-columns:repeat(2,1fr); gap:1.5rem 1rem} }
+
+/* ───────── Секции ───────── */
+.ftco-section { padding:6rem 0 !important; }
+.ftco-section.bg-light,.bg-light { background:var(--nes-canvas-2)!important; }
+.heading-section h2 { font-size:clamp(2rem,4vw,3rem); line-height:1.08; }
+.heading-section p { color:var(--nes-muted); font-size:1.05rem; }
+
+/* ───────── Карточки услуг — хайрлайн, плоские иконки ───────── */
+.services.block-6 {
+  background:var(--nes-card)!important; border:1px solid var(--nes-line); border-radius:var(--nes-r);
+  padding:2.2rem 1.6rem !important; box-shadow:none; height:100%;
+  transition:transform .18s ease, border-color .18s ease;
+}
+.services.block-6:hover { transform:translateY(-4px); border-color:var(--nes-accent); }
+.services .icon { width:60px; height:60px; border-radius:14px; background:var(--nes-accent-soft)!important;
+  display:flex; align-items:center; justify-content:center; margin:0 auto .3rem; }
+.services .icon span, .services .icon i { color:var(--nes-accent)!important; font-size:1.5rem !important; }
+/* убираем голубые/зелёные «уголки» гексагона из шаблона (.color-3/.color-4) — плитки у нас плоские оранжевые */
+.services .icon.color-1, .services .icon.color-2, .services .icon.color-3, .services .icon.color-4 { background:var(--nes-accent-soft)!important; }
+.services .icon:before, .services .icon:after { display:none !important; }
+.services .icon.color-1 span, .services .icon.color-2 span, .services .icon.color-3 span, .services .icon.color-4 span,
+.services .icon.color-1 i, .services .icon.color-2 i, .services .icon.color-3 i, .services .icon.color-4 i { color:var(--nes-accent)!important; }
+.services .heading { font-size:1.26rem; margin-top:.6rem; }
+.services p { color:var(--nes-ink-soft); }
+
+/* ───────── Блок работ — чистая сетка ───────── */
+.nes-works__grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; }
+.nes-work {
+  display:block; background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r);
+  overflow:hidden; text-decoration:none; transition:transform .18s ease, border-color .18s ease;
+}
+.nes-work:hover { transform:translateY(-4px); border-color:var(--nes-accent); }
+.nes-work__img { aspect-ratio:16/10; overflow:hidden; background:var(--nes-canvas-2); border-bottom:1px solid var(--nes-line); }
+.nes-work__img img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+.nes-work:hover .nes-work__img img { transform:scale(1.04); }
+.nes-work__meta { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:1.1rem 1.25rem; }
+.nes-work__name { display:block; font-weight:700; color:var(--nes-ink); font-size:1.06rem; }
+.nes-work__tag { display:block; font-family:"JetBrains Mono",monospace; font-size:.72rem; color:var(--nes-muted); margin-top:3px; }
+.nes-work__meta i { color:var(--nes-line-2); transition:color .18s ease; font-size:.95rem; }
+.nes-work:hover .nes-work__meta i { color:var(--nes-accent); }
+
+/* ───────── Тарифы ───────── */
+.card { border:1px solid var(--nes-line)!important; border-radius:var(--nes-r)!important; overflow:hidden; box-shadow:none; background:var(--nes-card)!important;
+  transition:transform .18s ease, border-color .18s ease; }
+.card:hover { transform:translateY(-4px); border-color:var(--nes-accent); }
+.card-body.bg-light { background:var(--nes-card)!important; }
+.card-title { font-size:1.4rem; }
+.card-title span[style] {
+  background:none !important; -webkit-text-fill-color:var(--nes-accent) !important; color:var(--nes-accent) !important;
+}
+.pricing-text,.card-text { color:var(--nes-ink-soft); opacity:1; }
+
+/* ───────── Тарифы — аккуратная сетка карточек (главная + услуги) ───────── */
+.nes-tariffs{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; align-items:stretch; }
+@media (max-width:991.98px){ .nes-tariffs{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:575.98px){ .nes-tariffs{ grid-template-columns:1fr; } }
+.nes-tariff{
+  display:flex; flex-direction:column; height:100%;
+  background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r);
+  padding:1.7rem 1.5rem; text-align:left;
+  transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.nes-tariff:hover{ transform:translateY(-4px); border-color:var(--nes-accent); box-shadow:0 14px 36px rgba(31,24,18,.07); }
+.nes-tariff__ico{
+  width:48px; height:48px; border-radius:12px; background:var(--nes-accent-soft);
+  display:flex; align-items:center; justify-content:center; margin-bottom:1rem;
+}
+.nes-tariff__ico i{ color:var(--nes-accent); font-size:1.25rem; }
+.nes-tariff__title{ font-size:1.15rem; font-weight:800; color:var(--nes-ink); margin:0 0 .55rem; line-height:1.25; }
+.nes-tariff__price{ font-size:.9rem; color:var(--nes-muted); margin:0 0 .9rem; }
+.nes-tariff__price b{ color:var(--nes-accent); font-weight:800; font-size:1.4rem; }
+.nes-tariff__desc{ color:var(--nes-ink-soft); font-size:.92rem; line-height:1.55; margin:0 0 1.4rem; }
+.nes-tariff__btn{
+  margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; gap:.45rem;
+  padding:.62rem 1.2rem; border-radius:999px; border:1.5px solid var(--nes-line-2);
+  background:transparent; color:var(--nes-ink); font-weight:700; font-size:.9rem;
+  text-decoration:none; transition:border-color .15s ease, color .15s ease, gap .15s ease;
+}
+.nes-tariff__btn i{ font-size:.78rem; transition:transform .15s ease; }
+.nes-tariff__btn:hover{ border-color:var(--nes-accent); color:var(--nes-accent); }
+.nes-tariff__btn:hover i{ transform:translateX(3px); }
+
+/* ───────── Футер ───────── */
+.ftco-bg-dark,.ftco-footer { background:var(--nes-ink)!important; }
+.ftco-footer { border-top:2px solid var(--nes-accent); }
+.ftco-footer,.ftco-footer p,.ftco-footer a,.ftco-footer li { color:rgba(255,255,255,.7)!important; }
+.ftco-footer .ftco-heading-2 { color:#fff!important; }
+.ftco-footer a:hover { color:var(--nes-accent)!important; }
+
+/* ───────── Квиз / формы ───────── */
+.quiz-questions { background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); box-shadow:none; padding:2rem; }
+.progress-bar { background:var(--nes-accent)!important; }
+.answer-block label { border:1px solid var(--nes-line); border-radius:10px; transition:all .14s; }
+.answer-block input[type=radio]:checked + label { border-color:var(--nes-accent)!important; background:var(--nes-accent-soft); color:var(--nes-accent)!important; }
+.form-control { border-radius:10px !important; border:1px solid var(--nes-line-2)!important; padding:.8rem 1rem !important; }
+.form-control:focus { border-color:var(--nes-accent)!important; box-shadow:0 0 0 3px var(--nes-accent-soft)!important; }
+.modal-content { border-radius:var(--nes-r)!important; border:none!important; }
+.modal-header { border-bottom:1px solid var(--nes-line); }
+
+a { transition:color .14s; }
+a:hover { color:var(--nes-accent); }
+#ftco-loader .path { stroke:var(--nes-accent)!important; }
+
+/* ───────── Page-head (внутренние страницы) ───────── */
+.nes-pagehead {
+  padding: 9rem 0 3.2rem;
+  background: radial-gradient(46% 60% at 90% 10%, rgba(255,107,26,.07) 0%, transparent 60%), var(--nes-canvas);
+  border-bottom: 1px solid var(--nes-line);
+}
+.nes-pagehead__title { font-size: clamp(2.2rem,5vw,3.6rem); font-weight:800; letter-spacing:-.035em; line-height:1.05; margin:.3rem 0 .8rem; }
+.nes-pagehead__sub { color: var(--nes-muted); font-size: clamp(1rem,1.4vw,1.18rem); max-width: 56ch; }
+
+/* ───────── Контакты ───────── */
+.nes-contact-cards { display:flex; flex-direction:column; gap:12px; }
+.nes-contact-card { display:flex; align-items:center; gap:14px; padding:1rem 1.15rem; background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r-sm); text-decoration:none; transition:border-color .15s ease, transform .15s ease; }
+a.nes-contact-card:hover { border-color:var(--nes-accent); transform:translateY(-2px); }
+.nes-contact-card__ic { width:46px; height:46px; border-radius:12px; background:var(--nes-accent-soft); color:var(--nes-accent); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex:0 0 auto; }
+.nes-contact-card__body { display:flex; flex-direction:column; }
+.nes-contact-card__body small { color:var(--nes-muted); font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; }
+.nes-contact-card__body b { color:var(--nes-ink); font-weight:700; font-size:1.02rem; }
+.nes-form-card { background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:2rem; }
+.nes-trust-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.7rem; }
+.nes-trust-list li { display:flex; align-items:center; gap:.6rem; color:var(--nes-ink-soft); font-size:.95rem; }
+.nes-trust-list li i { color:var(--nes-accent); font-size:.85rem; flex:0 0 auto; }
+
+/* ───────── Thanks ───────── */
+.nes-thanks { padding: 8rem 0; background: radial-gradient(50% 60% at 50% 0%, rgba(255,107,26,.07), transparent 60%), var(--nes-canvas); }
+.nes-thanks__card { max-width: 640px; margin:0 auto; text-align:center; background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:3rem 2rem; box-shadow:var(--nes-shadow); }
+.nes-thanks__check { width:64px; height:64px; border-radius:50%; background:var(--nes-accent); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:1.6rem; margin-bottom:1.2rem; }
+.nes-thanks__title { font-size:clamp(1.8rem,4vw,2.6rem); font-weight:800; letter-spacing:-.03em; margin-bottom:1rem; }
+.nes-thanks__text { color:var(--nes-ink-soft); margin-bottom:1rem; }
+.nes-thanks__text a { color:var(--nes-accent); font-weight:600; }
+.nes-thanks__cta { display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem; }
+
+/* ───────── Портфолио — список ───────── */
+.blog-entry { background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); overflow:hidden; margin-bottom:1.5rem; transition:transform .18s ease, border-color .18s ease; }
+.blog-entry:hover { transform:translateY(-4px); border-color:var(--nes-accent); }
+.blog-entry .block-20 { display:block; height:220px; background-size:cover !important; background-position:center !important; border-bottom:1px solid var(--nes-line); }
+.blog-entry .text { padding:1.1rem 1.25rem; }
+.blog-entry .meta div { font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.72rem; color:var(--nes-muted); text-transform:uppercase; letter-spacing:.06em; }
+.blog-entry .heading { font-size:1.1rem; font-weight:700; margin-top:.3rem; }
+
+/* ───────── Прайс block-11 (страница услуг) — лево-выравнивание, флэт ───────── */
+.block-11 { display:flex; flex-direction:column; text-align:left; background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:2rem 1.7rem; height:100%; transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.block-11:hover { transform:translateY(-4px); border-color:var(--nes-accent); box-shadow:0 14px 36px rgba(31,24,18,.07); }
+.block-11 .excerpt { background:none !important; -webkit-text-fill-color:var(--nes-ink) !important; color:var(--nes-ink) !important; font-weight:800; font-size:1.3rem; }
+.block-11 .excerpt.fs-5 { color:var(--nes-muted) !important; -webkit-text-fill-color:var(--nes-muted) !important; font-weight:500; font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.78rem !important; letter-spacing:.04em; margin-top:.35rem; }
+.block-11 .price { display:flex; align-items:baseline; gap:.3rem; flex-wrap:nowrap; white-space:nowrap; font-weight:800; font-size:1.75rem; color:var(--nes-accent); margin:.7rem 0 1.2rem; }
+.block-11 .number { white-space:nowrap; background:none !important; -webkit-text-fill-color:var(--nes-accent) !important; color:var(--nes-accent) !important; }
+.block-11 .price__unit { color:var(--nes-muted); font-size:.92rem; font-weight:600; }
+.block-11 .pricing-text { color:var(--nes-ink-soft); padding-left:1.15rem; margin:0 0 1.5rem; }
+.block-11 .pricing-text li { margin-bottom:.55rem; line-height:1.5; }
+.block-11 .nes-tariff__btn { margin-top:auto; }
+/* Доп. услуги block-7 (если останутся) */
+.block-7 { background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:1.8rem 1.4rem; height:100%; transition:transform .18s ease, border-color .18s ease; }
+.block-7:hover { transform:translateY(-4px); border-color:var(--nes-accent); }
+.block-7 .price { color:var(--nes-accent); font-weight:800; }
+
+/* ───────── Портфолио — деталь ───────── */
+.block-3 .text .subheading { color:var(--nes-accent) !important; font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; background:none; border:none; padding:0; }
+
+/* ═════════════════════════════════════════════════════════════
+   Контактные виджеты: FAB-трубка (ПК), нижняя панель (моб.),
+   поповер с контактами и приглашение (15 сек / exit-intent)
+   ═════════════════════════════════════════════════════════════ */
+
+/* — Плавающая кнопка-трубка (десктоп, правый нижний угол) — */
+.nes-fab{
+  position:fixed; right:24px; bottom:24px; z-index:1080;
+  width:60px; height:60px; border:none; border-radius:50%;
+  background:var(--nes-accent); color:#fff; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 26px rgba(255,107,26,.42);
+  transition:transform .18s ease, background .18s ease;
+}
+.nes-fab:hover{ background:var(--nes-accent-d); transform:translateY(-2px) scale(1.04); }
+.nes-fab svg{ width:26px; height:26px; fill:#fff; }
+.nes-fab::after{ /* пульс */
+  content:""; position:absolute; inset:0; border-radius:50%;
+  box-shadow:0 0 0 0 rgba(255,107,26,.55); animation:nesPulse 2.4s infinite;
+}
+@keyframes nesPulse{ 70%{ box-shadow:0 0 0 16px rgba(255,107,26,0); } 100%{ box-shadow:0 0 0 0 rgba(255,107,26,0); } }
+
+/* — Поповер с контактами над FAB — */
+.nes-pop{
+  position:fixed; right:24px; bottom:96px; z-index:1081;
+  width:300px; max-width:calc(100vw - 32px);
+  background:var(--nes-card); border:1px solid var(--nes-line);
+  border-radius:var(--nes-r); padding:1.4rem 1.4rem 1.5rem;
+  box-shadow:0 18px 50px rgba(31,24,18,.18);
+  transform:translateY(12px) scale(.98); opacity:0; pointer-events:none;
+  transition:transform .2s ease, opacity .2s ease;
+}
+.nes-pop.is-open{ transform:translateY(0) scale(1); opacity:1; pointer-events:auto; }
+.nes-pop__close{
+  position:absolute; top:8px; right:12px; border:none; background:none;
+  font-size:1.5rem; line-height:1; color:var(--nes-muted); cursor:pointer;
+}
+.nes-pop__close:hover{ color:var(--nes-ink); }
+.nes-pop__kicker{ font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; color:var(--nes-accent); margin:0 0 .35rem; }
+.nes-pop__title{ font-weight:800; font-size:1.15rem; color:var(--nes-ink); margin:0 0 .3rem; }
+.nes-pop__sub{ font-size:.85rem; color:var(--nes-muted); margin:0 0 1rem; line-height:1.4; }
+.nes-pop__phone{ display:block; font-weight:800; font-size:1.45rem; color:var(--nes-ink); text-decoration:none; margin-bottom:1rem; }
+.nes-pop__phone:hover{ color:var(--nes-accent); }
+.nes-pop__actions{ display:grid; grid-template-columns:1fr 1fr; gap:.6rem; }
+.nes-pop__btn{
+  display:flex; align-items:center; justify-content:center; gap:.4rem;
+  padding:.7rem .6rem; border-radius:999px; font-weight:700; font-size:.9rem;
+  text-decoration:none; transition:transform .15s ease, background .15s ease;
+}
+.nes-pop__btn:hover{ transform:translateY(-2px); }
+.nes-pop__btn--call{ background:var(--nes-accent); color:#fff; }
+.nes-pop__btn--call:hover{ background:var(--nes-accent-d); color:#fff; }
+.nes-pop__btn--tg{ background:#229ed9; color:#fff; }
+.nes-pop__btn--tg:hover{ background:#1c87ba; color:#fff; }
+
+/* — Нижняя липкая панель (мобайл) — */
+.nes-bar{
+  position:fixed; left:0; right:0; bottom:0; z-index:1080;
+  display:none; gap:.5rem; padding:.55rem .7rem;
+  background:rgba(255,255,255,.96); backdrop-filter:blur(8px);
+  border-top:1px solid var(--nes-line);
+  box-shadow:0 -6px 20px rgba(31,24,18,.08);
+}
+.nes-bar__btn{
+  flex:1; display:flex; align-items:center; justify-content:center; gap:.4rem;
+  padding:.85rem .5rem; border-radius:999px; font-weight:700; font-size:.95rem;
+  text-decoration:none; transition:background .15s ease;
+}
+.nes-bar__btn--call{ background:var(--nes-accent); color:#fff; }
+.nes-bar__btn--tg{ background:#229ed9; color:#fff; }
+
+/* — Приглашение по таймеру / выходу (центрированный оверлей) — */
+.nes-invite{
+  position:fixed; inset:0; z-index:1090;
+  display:flex; align-items:center; justify-content:center; padding:18px;
+  background:rgba(31,24,18,.55); opacity:0; pointer-events:none;
+  transition:opacity .25s ease;
+}
+.nes-invite.is-open{ opacity:1; pointer-events:auto; }
+.nes-invite__card{
+  position:relative; width:420px; max-width:100%;
+  background:var(--nes-card); border:1px solid var(--nes-line);
+  border-radius:var(--nes-r); padding:2.2rem 2rem 2rem; text-align:center;
+  box-shadow:0 30px 70px rgba(31,24,18,.3);
+  transform:translateY(16px) scale(.97); transition:transform .25s ease;
+}
+.nes-invite.is-open .nes-invite__card{ transform:translateY(0) scale(1); }
+.nes-invite__close{
+  position:absolute; top:10px; right:16px; border:none; background:none;
+  font-size:1.7rem; line-height:1; color:var(--nes-muted); cursor:pointer;
+}
+.nes-invite__close:hover{ color:var(--nes-ink); }
+.nes-invite__kicker{ font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; color:var(--nes-accent); margin:0 0 .5rem; }
+.nes-invite__title{ font-weight:800; font-size:1.5rem; color:var(--nes-ink); margin:0 0 .5rem; line-height:1.2; }
+.nes-invite__sub{ font-size:.95rem; color:var(--nes-muted); margin:0 0 1.3rem; line-height:1.5; }
+.nes-invite__phone{ display:inline-block; font-weight:800; font-size:1.8rem; color:var(--nes-ink); text-decoration:none; margin-bottom:1.3rem; }
+.nes-invite__phone:hover{ color:var(--nes-accent); }
+.nes-invite__actions{ display:flex; gap:.7rem; }
+.nes-invite__btn{
+  flex:1; display:flex; align-items:center; justify-content:center; gap:.4rem;
+  padding:.85rem .6rem; border-radius:999px; font-weight:700; font-size:.95rem;
+  text-decoration:none; transition:transform .15s ease, background .15s ease;
+}
+.nes-invite__btn:hover{ transform:translateY(-2px); }
+.nes-invite__btn--call{ background:var(--nes-accent); color:#fff; }
+.nes-invite__btn--call:hover{ background:var(--nes-accent-d); color:#fff; }
+.nes-invite__btn--tg{ background:#229ed9; color:#fff; }
+.nes-invite__btn--tg:hover{ background:#1c87ba; color:#fff; }
+
+/* — Адаптив: на мобиле прячем FAB+поповер, показываем панель — */
+@media (max-width:767.98px){
+  .nes-fab, .nes-pop{ display:none !important; }
+  .nes-bar{ display:flex; }
+  /* чтобы панель не перекрывала футер */
+  .ftco-footer{ margin-bottom:64px; }
+}

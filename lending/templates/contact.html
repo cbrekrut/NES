@@ -1,69 +1,69 @@
 {% extends "base.html"%}
 {% load static %}
+{% block title %}Контакты — NES@Agency · Тверь{% endblock %}
+{% block meta_description %}Свяжитесь с NES@Agency: телефон, Telegram, email. Обсудим внедрение Битрикс24, корпоративный портал или автоматизацию вашего бизнеса.{% endblock %}
+{% block og_title %}Контакты — NES@Agency{% endblock %}
+{% block og_description %}Телефон, Telegram, email. Обсудим вашу задачу.{% endblock %}
 {% block content %}
-    <div class="hero-wrap js-fullheight">
-      <div class="overlay"></div>
-      <div id="particles-js"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span style="opacity: 0.7;"><a href="#contact-us">Свяжитесь с нами</a></span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Контакты</h1>
+
+<section class="nes-pagehead">
+  <div class="container">
+    <span class="nes-kicker">Контакты</span>
+    <h1 class="nes-pagehead__title">Обсудим вашу задачу</h1>
+    <p class="nes-pagehead__sub">Расскажите, что нужно автоматизировать или внедрить — предложим решение и оценку в течение рабочего дня.</p>
+  </div>
+</section>
+
+<section class="ftco-section" id="contact-us">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <div class="nes-contact-cards">
+          <a href="tel:+79969225385" class="nes-contact-card">
+            <span class="nes-contact-card__ic"><i class="fa-solid fa-phone"></i></span>
+            <span class="nes-contact-card__body"><small>Телефон</small><b>8 (996) 922-53-85</b></span>
+          </a>
+          <a href="https://t.me/+As9CGvSoJn5mYzRi" target="_blank" rel="noopener" class="nes-contact-card">
+            <span class="nes-contact-card__ic"><i class="fa-brands fa-telegram"></i></span>
+            <span class="nes-contact-card__body"><small>Telegram</small><b>Написать в чат</b></span>
+          </a>
+          <a href="mailto:info@nes-agency.ru" class="nes-contact-card">
+            <span class="nes-contact-card__ic"><i class="fa-solid fa-envelope"></i></span>
+            <span class="nes-contact-card__body"><small>Email</small><b>info@nes-agency.ru</b></span>
+          </a>
+          <div class="nes-contact-card nes-contact-card--static">
+            <span class="nes-contact-card__ic"><i class="fa-solid fa-building"></i></span>
+            <span class="nes-contact-card__body"><small>Реквизиты</small><b>ООО «НЭС» · ИНН 6900020040</b></span>
           </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="nes-form-card">
+          <h2 class="h4 mb-4">Оставьте заявку</h2>
+          <form action="" method="post" id="form1">
+            {% csrf_token %}
+            <div class="form-group mb-3">
+              <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+              <div class="error text-start fs-6 fw-light"></div>
+            </div>
+            <div class="form-group mb-3">
+              <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+              <div class="error text-start fs-6 fw-light"></div>
+            </div>
+            <div class="form-group mb-3">
+              <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+              <div class="error text-start fs-6 fw-light"></div>
+            </div>
+            <div class="form-group mb-3">
+              <textarea aria-label="textarea" name="Textarea" cols="30" rows="6" class="form-control" placeholder="Какую задачу нужно решить? Битрикс24, портал, автоматизация…"></textarea>
+              <div class="error text-start fs-6 fw-light"></div>
+            </div>
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+            <input type="submit" id="submit-button1" value="Отправить заявку" class="btn btn-primary py-3 px-5 prices-btn">
+          </form>
         </div>
       </div>
     </div>
-    
-    <section class="ftco-section contact-section ftco-degree-bg ftco-animate" id="contact-us">
-      <div class="container bg-light">
-        <div class="row d-flex mb-5 contact-info text-center">
-          <div class="col-md-12 mb-5">
-            <h2 class="h4">Контактная информация</h2>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-md-3">
-          <p>Компания:</p><p>ООО "НЭС"</p>
-          </div>
-          <div class="col-md-3">
-          <p>Телефон:</p> <a href="tel://89969225385">8(996)922-53-85</a>
-          </div>
-          <div class="col-md-3">
-            <p>Email:</p><a href="mailto:nes.agency@yandex.ru">nes.agency@yandex.ru</a>
-          </div>
-          <div class="col-md-3">
-          <p>ИНН:</p><p>6900020040</p>
-          </div>
-        </div>
-        <div class="row block-9 ">
-          <div class="col-md-6 pr-md-5">
-            <form action="" method="post" id="form1">
-              {% csrf_token %}
-              <div class="form-group">
-                <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
-                <div class="error text-start fs-6 fw-light"></div>
-              </div>
-              <div class="form-group">
-                <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
-                <div class="error text-start fs-6 fw-light"></div>
-              </div>
-              <div class="form-group">
-                <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
-                <div class="error text-start fs-6 fw-light"></div>
-              </div>
-              <div class="form-group">
-                <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
-                <div class="error text-start fs-6 fw-light"></div>
-              </div>
-              <div class="form-group text-center">
-                <div class="g-recaptcha mb-5" data-sitekey="6LdDOcspAAAAAJ62pJJ9C8fvCBCUeya5JQ-CsRP9"></div>
-                <input type="submit" id="submit-button1" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
-              </div>
-            </form>
-          </div>
-          <div class="col-md-6 nes-logo">
-            <img src="{% static "images/nes_logo.jpg" %}" alt="nes-logo">
-          </div>
-        </div>
-      </div>
-    </section>
-    {% endblock content%}
+  </div>
+</section>
+{% endblock content%}
