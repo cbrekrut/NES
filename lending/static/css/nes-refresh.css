@@ -179,6 +179,36 @@ p { opacity:.92; }
 }
 .pricing-text,.card-text { color:var(--nes-ink-soft); opacity:1; }
 
+/* ───────── Тарифы — аккуратная сетка карточек (главная + услуги) ───────── */
+.nes-tariffs{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; align-items:stretch; }
+@media (max-width:991.98px){ .nes-tariffs{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:575.98px){ .nes-tariffs{ grid-template-columns:1fr; } }
+.nes-tariff{
+  display:flex; flex-direction:column; height:100%;
+  background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r);
+  padding:1.7rem 1.5rem; text-align:left;
+  transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.nes-tariff:hover{ transform:translateY(-4px); border-color:var(--nes-accent); box-shadow:0 14px 36px rgba(31,24,18,.07); }
+.nes-tariff__ico{
+  width:48px; height:48px; border-radius:12px; background:var(--nes-accent-soft);
+  display:flex; align-items:center; justify-content:center; margin-bottom:1rem;
+}
+.nes-tariff__ico i{ color:var(--nes-accent); font-size:1.25rem; }
+.nes-tariff__title{ font-size:1.15rem; font-weight:800; color:var(--nes-ink); margin:0 0 .55rem; line-height:1.25; }
+.nes-tariff__price{ font-size:.9rem; color:var(--nes-muted); margin:0 0 .9rem; }
+.nes-tariff__price b{ color:var(--nes-accent); font-weight:800; font-size:1.4rem; }
+.nes-tariff__desc{ color:var(--nes-ink-soft); font-size:.92rem; line-height:1.55; margin:0 0 1.4rem; }
+.nes-tariff__btn{
+  margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; gap:.45rem;
+  padding:.62rem 1.2rem; border-radius:999px; border:1.5px solid var(--nes-line-2);
+  background:transparent; color:var(--nes-ink); font-weight:700; font-size:.9rem;
+  text-decoration:none; transition:border-color .15s ease, color .15s ease, gap .15s ease;
+}
+.nes-tariff__btn i{ font-size:.78rem; transition:transform .15s ease; }
+.nes-tariff__btn:hover{ border-color:var(--nes-accent); color:var(--nes-accent); }
+.nes-tariff__btn:hover i{ transform:translateX(3px); }
+
 /* ───────── Футер ───────── */
 .ftco-bg-dark,.ftco-footer { background:var(--nes-ink)!important; }
 .ftco-footer { border-top:2px solid var(--nes-accent); }

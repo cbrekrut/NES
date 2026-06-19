@@ -157,8 +157,8 @@
     </section>
 
 <!-- ТАРИФЫ -->
-<section class="ftco-section d-flex justify-content-center" id="prices">
-  <div class="container prices-container mb-5 pb-5" style="margin:0;width: 100vw; max-width: 100vw; padding: 0 5vw;">
+<section class="ftco-section" id="prices">
+  <div class="container mb-5 pb-5">
     <div class="row no-gutters justify-content-center mb-5 pb-2">
       <div class="col-md-8 text-center heading-section ftco-animate">
         <span class="subheading">Услуги и цены</span>
@@ -166,46 +166,34 @@
         <p>Внедрение, порталы и автоматизация — наша основа. Сайты делаем, когда они часть задачи.</p>
       </div>
     </div>
-    <div class="row prices">
-      <div class="col-md-6 col-lg-4 col-12 mb-3 ftco-animate" >
-        <div class="card mr-md-1" style="border:none; height: 100%;">
-          <div class="card-body bg-light" id="card1">
-            <h5 class="card-title">Внедрение Битрикс24</h5>
-            <p class="card-text mb-2">от <span style="color:#FF6B1A;font-weight:800;font-size:1.3rem">2 000 ₽/час</span></p>
-            <p class="card-text">CRM, воронки продаж, телефония, бизнес-процессы и роботы. Настраиваем под ваш процесс и обучаем команду.</p>
-            <a href="{% url "prices" %}" class="btn btn-prices-first btn-lg">Подробнее</a>
-          </div>
-        </div>
+    <div class="nes-tariffs ftco-animate">
+      <div class="nes-tariff">
+        <div class="nes-tariff__ico"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3 class="nes-tariff__title">Внедрение Битрикс24</h3>
+        <p class="nes-tariff__price">от <b>2 000 ₽</b>/час</p>
+        <p class="nes-tariff__desc">CRM, воронки продаж, телефония, бизнес-процессы и роботы. Настраиваем под ваш процесс и обучаем команду.</p>
+        <a href="{% url "service_detail" 'CRM' %}" class="nes-tariff__btn">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate" >
-        <div class="card mr-md-1 d-flex flex-column justify-content-between" style="border:none; height: 100%;">
-          <div class="card-body bg-light" id="card2">
-            <h5 class="card-title">Корпоративный портал</h5>
-            <p class="card-text mb-2">от <span style="color:#FF6B1A;font-weight:800;font-size:1.3rem">150 000 ₽</span></p>
-            <p class="card-text">Внутренний портал на Битрикс24: задачи, проекты, документы, оргструктура и база знаний компании.</p>
-            <a href="{% url "prices" %}" class="btn btn-prices-second btn-lg">Подробнее</a>
-          </div>
-        </div>
+      <div class="nes-tariff">
+        <div class="nes-tariff__ico"><i class="fa-solid fa-sitemap"></i></div>
+        <h3 class="nes-tariff__title">Корпоративный портал</h3>
+        <p class="nes-tariff__price">от <b>150 000 ₽</b></p>
+        <p class="nes-tariff__desc">Внутренний портал на Битрикс24: задачи, проекты, документы, оргструктура и база знаний компании.</p>
+        <a href="{% url "prices" %}" class="nes-tariff__btn">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate" >
-        <div class="card mr-md-1 d-flex flex-column justify-content-between" style="border:none; height: 100%;">
-          <div class="card-body bg-light" id="card3">
-            <h5 class="card-title">Автоматизация и 1С</h5>
-            <p class="card-text mb-2">от <span style="color:#FF6B1A;font-weight:800;font-size:1.3rem">60 000 ₽</span></p>
-            <p class="card-text">Интеграция с 1С, синхронизация данных без двойного ввода, роботы и автоматическая отчётность.</p>
-            <a href="{% url "prices" %}" class="btn btn-prices-third btn-lg">Подробнее</a>
-          </div>
-        </div>
+      <div class="nes-tariff">
+        <div class="nes-tariff__ico"><i class="fa-solid fa-gears"></i></div>
+        <h3 class="nes-tariff__title">Автоматизация и 1С</h3>
+        <p class="nes-tariff__price">от <b>60 000 ₽</b></p>
+        <p class="nes-tariff__desc">Интеграция с 1С, синхронизация данных без двойного ввода, роботы и автоматическая отчётность.</p>
+        <a href="{% url "prices" %}" class="nes-tariff__btn">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="col-md-6 col-lg-4 col-12 d-block mb-3 ftco-animate">
-        <div class="card" style="border:none; height: 100%;">
-          <div class="card-body bg-light" id="card5">
-            <h5 class="card-title">Интернет-магазин</h5>
-            <p class="card-text mb-2">от <span style="color:#FF6B1A;font-weight:800;font-size:1.3rem">170 000 ₽</span></p>
-            <p class="card-text">Каталог, корзина, онлайн-оплата и интеграции для продаж в сети.</p>
-            <a href="{% url "prices" %}" class="btn btn-prices-third btn-lg">Подробнее</a>
-          </div>
-        </div>
+      <div class="nes-tariff">
+        <div class="nes-tariff__ico"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3 class="nes-tariff__title">Интернет-магазин</h3>
+        <p class="nes-tariff__price">от <b>170 000 ₽</b></p>
+        <p class="nes-tariff__desc">Каталог, корзина, онлайн-оплата и интеграции с 1С и складом для продаж в сети.</p>
+        <a href="{% url "service_detail" 'ecom' %}" class="nes-tariff__btn">Подробнее <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
