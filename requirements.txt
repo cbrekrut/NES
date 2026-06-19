@@ -1,0 +1,10 @@
+# NES@Agency — продакшен-зависимости.
+# Сервер: Beget, Python 3.10, Django под Phusion Passenger.
+# Установка на сервере:  pip install -r requirements.txt
+#
+# Перечислены только прямые зависимости; транзитивные (requests, asgiref,
+# sqlparse и т.д.) подтянутся автоматически.
+
+Django==5.2.15            # фреймворк
+pillow==12.2.0            # ImageField в модели Project (портфолио)
+pyTelegramBotAPI==4.34.0  # отправка заявок в Telegram (lending/views.py)

@@ -1,13 +1,38 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-#waun7n%*v6qp8@k&1%-vxl4^0#*e8=v())e3w%ew=bdroqsi0'
+# SECRET_KEY читается из окружения (на Beget — переменная Python-приложения
+# DJANGO_SECRET_KEY). Фолбэк оставлен, чтобы прод не падал без переменной, но
+# в публичном репозитории ключ стоит переопределить через окружение.
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-#waun7n%*v6qp8@k&1%-vxl4^0#*e8=v())e3w%ew=bdroqsi0',
+)
 
-DEBUG = False
+# DEBUG включается ТОЛЬКО переменной окружения DJANGO_DEBUG=1 (для локальной
+# разработки). На проде переменная не задаётся → DEBUG=False. Так больше не
+# нужно держать «временный» DEBUG=True в файле и следить, чтобы не закоммитить.
+DEBUG = os.environ.get('DJANGO_DEBUG', '') == '1'
 
-ALLOWED_HOSTS = ['nes-agency.ru','*','www.nes-agency.ru']
+ALLOWED_HOSTS = ['nes-agency.ru', 'www.nes-agency.ru']
+
+# Локальная разработка: пускаем localhost только при DEBUG, прод-список не трогаем.
+if DEBUG:
+    ALLOWED_HOSTS += ['localhost', '127.0.0.1', '[::1]']
+
+# Формы отправляются POST'ом по HTTPS. При DEBUG=False без доверенных origin'ов
+# Django отвергает такие запросы с 403 (CSRF) — поэтому перечисляем их явно.
+CSRF_TRUSTED_ORIGINS = ['https://nes-agency.ru', 'https://www.nes-agency.ru']
+
+# Сайт работает за nginx/Passenger, который терминирует TLS и проксирует по
+# HTTP. Этот заголовок говорит Django, что исходный запрос был по HTTPS.
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# Куки только по HTTPS на проде; на локальном http (DEBUG=True) — обычные.
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
 
 
 # Application definition
@@ -107,7 +132,10 @@ USE_TZ = True
 # ошибкой staticfiles.E002 на старте — поэтому STATICFILES_DIRS убран,
 # а STATIC_ROOT вынесен в отдельный каталог.
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# collectstatic складывает сюда; nginx Beget'а отдаёт /static/ из этой же папки.
+# Путь совпадает с прежним прод-значением ('static/'), чтобы не перенастраивать
+# веб-сервер. STATICFILES_DIRS не задаём — иначе конфликт с STATIC_ROOT (E002).
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Медиа-файлы (изображения проектов из модели Project).
 # Было 'NES/NES/media/' — двойной NES ломал src картинок портфолио.
