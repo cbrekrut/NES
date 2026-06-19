@@ -148,7 +148,12 @@ p { opacity:.92; }
 .services.block-6:hover { transform:translateY(-4px); border-color:var(--nes-accent); }
 .services .icon { width:60px; height:60px; border-radius:14px; background:var(--nes-accent-soft)!important;
   display:flex; align-items:center; justify-content:center; margin:0 auto .3rem; }
-.services .icon span { color:var(--nes-accent)!important; font-size:1.6rem !important; }
+.services .icon span, .services .icon i { color:var(--nes-accent)!important; font-size:1.5rem !important; }
+/* убираем голубые/зелёные «уголки» гексагона из шаблона (.color-3/.color-4) — плитки у нас плоские оранжевые */
+.services .icon.color-1, .services .icon.color-2, .services .icon.color-3, .services .icon.color-4 { background:var(--nes-accent-soft)!important; }
+.services .icon:before, .services .icon:after { display:none !important; }
+.services .icon.color-1 span, .services .icon.color-2 span, .services .icon.color-3 span, .services .icon.color-4 span,
+.services .icon.color-1 i, .services .icon.color-2 i, .services .icon.color-3 i, .services .icon.color-4 i { color:var(--nes-accent)!important; }
 .services .heading { font-size:1.26rem; margin-top:.6rem; }
 .services p { color:var(--nes-ink-soft); }
 
@@ -248,6 +253,9 @@ a.nes-contact-card:hover { border-color:var(--nes-accent); transform:translateY(
 .nes-contact-card__body small { color:var(--nes-muted); font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; }
 .nes-contact-card__body b { color:var(--nes-ink); font-weight:700; font-size:1.02rem; }
 .nes-form-card { background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:2rem; }
+.nes-trust-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.7rem; }
+.nes-trust-list li { display:flex; align-items:center; gap:.6rem; color:var(--nes-ink-soft); font-size:.95rem; }
+.nes-trust-list li i { color:var(--nes-accent); font-size:.85rem; flex:0 0 auto; }
 
 /* ───────── Thanks ───────── */
 .nes-thanks { padding: 8rem 0; background: radial-gradient(50% 60% at 50% 0%, rgba(255,107,26,.07), transparent 60%), var(--nes-canvas); }
@@ -266,15 +274,17 @@ a.nes-contact-card:hover { border-color:var(--nes-accent); transform:translateY(
 .blog-entry .meta div { font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.72rem; color:var(--nes-muted); text-transform:uppercase; letter-spacing:.06em; }
 .blog-entry .heading { font-size:1.1rem; font-weight:700; margin-top:.3rem; }
 
-/* ───────── Прайс block-11 (страница услуг) — флэт вместо радужных градиентов ───────── */
-.block-11 { background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:2rem 1.6rem; height:100%; transition:transform .18s ease, border-color .18s ease; }
-.block-11:hover { transform:translateY(-4px); border-color:var(--nes-accent); }
-.block-11 .excerpt { background:none !important; -webkit-text-fill-color:var(--nes-ink) !important; color:var(--nes-ink) !important; font-weight:800; font-size:1.4rem; }
-.block-11 .excerpt.fs-5 { color:var(--nes-muted) !important; -webkit-text-fill-color:var(--nes-muted) !important; font-weight:500; font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.8rem !important; letter-spacing:.02em; }
-.block-11 .number { background:none !important; -webkit-text-fill-color:var(--nes-accent) !important; color:var(--nes-accent) !important; }
-.block-11 .price { font-weight:800; font-size:1.7rem; color:var(--nes-accent); display:block; margin:.5rem 0 1.2rem; }
-.block-11 .price sup { color:var(--nes-muted); font-size:.9rem; -webkit-text-fill-color:var(--nes-muted); }
-.block-11 .pricing-text { color:var(--nes-ink-soft); }
+/* ───────── Прайс block-11 (страница услуг) — лево-выравнивание, флэт ───────── */
+.block-11 { display:flex; flex-direction:column; text-align:left; background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:2rem 1.7rem; height:100%; transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.block-11:hover { transform:translateY(-4px); border-color:var(--nes-accent); box-shadow:0 14px 36px rgba(31,24,18,.07); }
+.block-11 .excerpt { background:none !important; -webkit-text-fill-color:var(--nes-ink) !important; color:var(--nes-ink) !important; font-weight:800; font-size:1.3rem; }
+.block-11 .excerpt.fs-5 { color:var(--nes-muted) !important; -webkit-text-fill-color:var(--nes-muted) !important; font-weight:500; font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; font-size:.78rem !important; letter-spacing:.04em; margin-top:.35rem; }
+.block-11 .price { display:flex; align-items:baseline; gap:.3rem; flex-wrap:nowrap; white-space:nowrap; font-weight:800; font-size:1.75rem; color:var(--nes-accent); margin:.7rem 0 1.2rem; }
+.block-11 .number { white-space:nowrap; background:none !important; -webkit-text-fill-color:var(--nes-accent) !important; color:var(--nes-accent) !important; }
+.block-11 .price__unit { color:var(--nes-muted); font-size:.92rem; font-weight:600; }
+.block-11 .pricing-text { color:var(--nes-ink-soft); padding-left:1.15rem; margin:0 0 1.5rem; }
+.block-11 .pricing-text li { margin-bottom:.55rem; line-height:1.5; }
+.block-11 .nes-tariff__btn { margin-top:auto; }
 /* Доп. услуги block-7 (если останутся) */
 .block-7 { background:var(--nes-card); border:1px solid var(--nes-line); border-radius:var(--nes-r); padding:1.8rem 1.4rem; height:100%; transition:transform .18s ease, border-color .18s ease; }
 .block-7:hover { transform:translateY(-4px); border-color:var(--nes-accent); }

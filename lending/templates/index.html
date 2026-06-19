@@ -210,7 +210,7 @@
     <div class="row">
       <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services d-block text-center">
-          <div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-3"><span class="align-self-center icon-lightbulb-o"></span></div></div>
+          <div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-3"><i class="align-self-center fa-solid fa-magnifying-glass-chart"></i></div></div>
           <div class="media-body p-2 mt-3">
             <h3 class="heading fw-bold color-dark" >Анализ и аудит</h3>
             <p>Погружаемся в ваши процессы, фиксируем требования и узкие места. На выходе — концепция решения и план внедрения.</p>
@@ -219,7 +219,7 @@
       </div>
       <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services d-block text-center">
-          <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><span class="align-self-center icon-laptop"></span></div></div>
+          <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><i class="align-self-center fa-solid fa-screwdriver-wrench"></i></div></div>
           <div class="media-body p-2 mt-3">
             <h3 class="heading fw-bold color-dark">Настройка и разработка</h3>
             <p>Настраиваем Битрикс24 и разрабатываем портал под ваши процессы: воронки, задачи, документооборот и роботы.</p>
@@ -230,7 +230,7 @@
         <div class="media block-6 services d-block text-center">
             <div class="d-flex justify-content-center">
                 <div class="icon color-3 d-flex justify-content-center mb-3">
-                    <span class="align-self-center icon-gear"></span>
+                    <i class="align-self-center fa-solid fa-layer-group"></i>
                 </div>
             </div>
             <div class="media-body p-2 mt-3">
@@ -242,7 +242,7 @@
 
       <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services d-block text-center">
-          <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><span class="align-self-center icon-live_help"></span></div></div>
+          <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><i class="align-self-center fa-solid fa-headset"></i></div></div>
           <div class="media-body p-2 mt-3">
             <h3 class="heading fw-bold color-dark" >Запуск и поддержка</h3>
             <p>
@@ -390,40 +390,59 @@
   </div>
 </section>
 {% comment %} ФОРМА {% endcomment %}
-<section class="ftco-section contact-section ftco-degree-bg" id="contact-us">
-  <div class="container bg-light">
-    <div class="row d-flex mb-5 contact-info text-center">
-      <div class="col-md-12 mb-5">
-        <h2 class="h4">Давайте обсудим ваш проект</h2>
+<section class="ftco-section" id="contact-us">
+  <div class="container">
+    <div class="row g-4 g-lg-5 align-items-start">
+      <div class="col-lg-5 ftco-animate">
+        <span class="subheading">Контакты</span>
+        <h2 class="mb-3">Давайте обсудим ваш проект</h2>
+        <p class="mb-4" style="color:var(--nes-muted)">Расскажите задачу — предложим решение, сроки и оценку. Обычно отвечаем в течение 15 минут.</p>
+        <div class="nes-contact-cards mb-4">
+          <a class="nes-contact-card" href="tel:+79969225385">
+            <span class="nes-contact-card__ic"><i class="fa-solid fa-phone"></i></span>
+            <span class="nes-contact-card__body"><small>Телефон</small><b>8 (996) 922-53-85</b></span>
+          </a>
+          <a class="nes-contact-card" href="https://t.me/+As9CGvSoJn5mYzRi" target="_blank" rel="noopener">
+            <span class="nes-contact-card__ic"><i class="fa-brands fa-telegram"></i></span>
+            <span class="nes-contact-card__body"><small>Telegram</small><b>Написать в чат</b></span>
+          </a>
+          <a class="nes-contact-card" href="mailto:info@nes-agency.ru">
+            <span class="nes-contact-card__ic"><i class="fa-solid fa-envelope"></i></span>
+            <span class="nes-contact-card__body"><small>Почта</small><b>info@nes-agency.ru</b></span>
+          </a>
+        </div>
+        <ul class="nes-trust-list">
+          <li><i class="fa-solid fa-check"></i> Бесплатная консультация и оценка проекта</li>
+          <li><i class="fa-solid fa-check"></i> 8 лет в корпоративной разработке</li>
+          <li><i class="fa-solid fa-check"></i> Договор, сроки и поддержка после запуска</li>
+        </ul>
       </div>
-      <div class="w-100"></div>
-    </div>
-    <div class="row block-9">
-      <div class="col-12 pr-md-5">
-        <form action="" method="post" id="form1">
-          {% csrf_token %}
-          <div class="form-group">
-            <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
-            <div class="error text-start fs-6 fw-light"></div>
-          </div>
-          <div class="form-group">
-            <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
-            <div class="error text-start fs-6 fw-light"></div>
-          </div>
-          <div class="form-group">
-            <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
-            <div class="error text-start fs-6 fw-light"></div>
-          </div>
-          <div class="form-group">
-            <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="7" class="form-control" placeholder="Описание вашего проекта"></textarea>
-            <div class="error text-start fs-6 fw-light"></div>
-          </div>
-          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-          <div class="form-group text-center">
-            
-            <input type="submit" id="submit-button1" value="Оставить заявку" class="btn btn-primary py-3 px-5 mb-3 mb-md-0 prices-btn">
-          </div>
-        </form>
+      <div class="col-lg-7 ftco-animate">
+        <div class="nes-form-card">
+          <form action="" method="post" id="form1">
+            {% csrf_token %}
+            <div class="form-group">
+              <input id="name1" aria-label="name" type="text" name="name" placeholder="Ваше имя" class="form-control">
+              <div class="error text-start fs-6 fw-light"></div>
+            </div>
+            <div class="form-group">
+              <input id="email1" aria-label="email" type="text" name="email" placeholder="Ваш E-mail" class="form-control">
+              <div class="error text-start fs-6 fw-light"></div>
+            </div>
+            <div class="form-group">
+              <input id="telephone1" aria-label="telephone" type="text" name="telephone" placeholder="Телефон" class="form-control">
+              <div class="error text-start fs-6 fw-light"></div>
+            </div>
+            <div class="form-group">
+              <textarea aria-label="textarea" name="Textarea" id="" cols="30" rows="6" class="form-control" placeholder="Коротко о задаче"></textarea>
+              <div class="error text-start fs-6 fw-light"></div>
+            </div>
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+            <div class="form-group mb-0">
+              <input type="submit" id="submit-button1" value="Оставить заявку" class="btn btn-primary py-3 px-5 w-100 prices-btn">
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
